@@ -86,9 +86,9 @@ trata-se da checagem de qualidade. Quando as tarefas são concluídas, eles ser�
 nessa lista são colocadas as tarefas que passaram pelos testes de controle de qualidade e que estão prontas para serem entregues ao usuário. Não há mais edições ou revisões a serem feitas aqui, sendo que as tarefas podem ser agendadas por estarem prontas para a ação.
 
 
-O quadro kanban do grupo no Trello — disponível através da URL <a href=https://trello.com/b/Y0TsILAi/projeto-academia> LINK DO QUADRO </a> — é apresentado, no estado atual, na Figura abaixo. A definição dessa estrutura se baseou na proposta feita por Littlefield (2016).
+O quadro kanban do grupo no Trello — disponível através da URL <a href=https://trello.com/b/ReQ9CSUv/fidelpoints> LINK DO QUADRO </a> — é apresentado, no estado atual, na Figura abaixo. A definição dessa estrutura se baseou na proposta feita por Littlefield (2016).
 
-![Processo 1](img/Trelo.JPG)
+![Processo 1](img/trello.JPG)
 
 A tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de cores/categorias: 
 
