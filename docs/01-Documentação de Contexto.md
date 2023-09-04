@@ -1,46 +1,27 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Nos últimos anos, o setor de varejo tem passado por uma evolução significativa, com um aumento notável na concorrência entre empresas para atrair e reter clientes. Nesse contexto, é essencial que os lojistas adotem estratégias inovadoras para engajar os clientes de maneira sustentável. Foi com essa visão em mente que desenvolvemos o nosso aplicativo de fidelidade. .
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Garantir que os clientes se mantenham fiés a uma loja, ou seja, repetindo a compra sistematicamente em um ponto comercial, é um grande desafio nos dias de hoje. Desta forma, os lojistas necessitam de soluções para garantir que seus clientes sejam convidados a voltar e realizar mais compra. Na era digital, uma grande forma de realizar esta fidelidade é o engajamento por sistemas de cashback. Porém, conseguir realizar programas desta natureza exige um sistema para uma boa gestão de informação e comunicação com os fornacedores e clientes e, normalmente, este sistemas são caros para empresários de micro e pequeno porte.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Desnvolver uma solução que colabore com os logistas, de micro e pequeno porte, a ter um programa de fidelidade baseado em pontos. 
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+- Desenvolver um ambiente para a gestão do logista, onde seja possível cadastrar e gerenciar a pontuação do clientes;
+- Desenvolver uma aplicação mobile para o cliente das lojas poderem acompanhar a a pontuação e relaziar a troca com os clientes;
+- Possiblitar a gestão dos produtos que poderão ser trocados;
+  
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+O nosso aplicativo oferece uma solução abrangente para lojistas, permitindo que eles estabeleçam programas de fidelidade personalizados que se alinham às necessidades e desejos dos clientes. Ao permitir que os lojistas definam pontos para cada compra realizada por um cliente, criamos uma ferramenta poderosa para reconhecer e recompensar o engajamento contínuo. Essa abordagem não apenas incentiva os clientes a voltarem à loja, mas também promove uma relação mais duradoura e significativa entre os consumidores e os estabelecimentos.
+Os consumidores estão constantemente buscando valor e recompensas por sua fidelidade às marcas. Nosso aplicativo oferece aos clientes a oportunidade de acumularem pontos a cada compra, criando um incentivo tangível para escolherem determinadas lojas em detrimento de outras. Além disso, a flexibilidade de trocar esses pontos por produtos ou cashback oferece aos clientes o poder de escolha, aumentando ainda mais a atratividade do programa de fidelidade.
+Um dos diferenciais do nosso aplicativo é a capacidade de os lojistas personalizarem os programas de fidelidade de acordo com seu público-alvo e objetivos específicos. Isso não apenas aumenta a eficácia das estratégias de recompensa, mas também demonstra aos clientes o comprometimento genuíno das lojas em reconhecer sua lealdade. A personalização gera um sentimento de pertencimento, incentivando os clientes a continuarem interagindo com o estabelecimento.
+Ao adotar o nosso aplicativo de fidelidade, os lojistas têm a oportunidade de melhorar a rentabilidade de longo prazo de seus negócios. A retenção de clientes existentes é mais econômica do que a aquisição de novos, e nosso sistema de pontos reforça essa retenção. Além disso, a capacidade de trocar pontos por produtos ou cashback mantém os clientes engajados e satisfeitos, reduzindo a probabilidade deles migrarem para a concorrência.
+Nosso aplicativo de fidelidade com pontos para lojistas e clientes surge como uma ferramenta valiosa em um mercado cada vez mais competitivo. Ao criar uma relação simbiótica entre lojistas e consumidores, promovemos o engajamento contínuo e a fidelização de clientes, ao mesmo tempo em que garantimos uma vantagem estratégica para os estabelecimentos comerciais. Acreditamos que essa abordagem inovadora é fundamental para a construção de um cenário de negócios mais sólido e bem-sucedido.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Nossos aplicativo terá com públco alvo logistas proprietários de lojas de micro e pequeno porte, que poderão oferecer aplicativos mobile para seus clientes em um programa de fidelidade baseado e cashback por pontuação.
