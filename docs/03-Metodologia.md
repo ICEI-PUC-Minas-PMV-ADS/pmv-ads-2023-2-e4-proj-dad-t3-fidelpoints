@@ -19,7 +19,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 |Ambiente| Plataforma|Link de Acesso |
 |---------| ----------- |  --------------|
 |Repositório de código fonte|Git Hub| [https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints/  |
-Documentos do Projeto|Pasta Src do projeto|[https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints/tree/main/src | 
+| Documentos do Projeto|Pasta Src do projeto|[https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints/tree/main/src | 
 |Projeto de Interface e Wireframes| Figma|  [https://www.figma.com/proto/aXiLKAsuXGIsSiGctHkWxe/Tela-de-Cadastro?type=design&node-id=2-2&t=hHIRKqPifNLOT7pc-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A2&show-proto-sidebar=1&mode=design | 
 |Gerenciamento do Projeto| Trello|   [https://trello.com/b/ReQ9CSUv/fidelpoints  |
 
