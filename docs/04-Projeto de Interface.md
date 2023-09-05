@@ -15,9 +15,13 @@ O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamen
 
 # Fluxo de telas Web
 
+> - [Protótipo Web](https://www.figma.com/file/aXiLKAsuXGIsSiGctHkWxe/Tela-Fidelpoints?type=design&node-id=0%3A1&mode=design&t=mtMbJESSdqch0F85-1)
+
 ![Exemplo de Diagrama de Fluxo](img/fluxotelasweb.png)
 
 # Fluxo de telas Mobile
+
+> - [Protótipo Mobile](https://www.figma.com/file/7xHSWqqxwBGVMDyu4cHVWW/Stephanie-Ingrid's-team-library-(Copy)?type=design&node-id=0%3A1&mode=design&t=DMEU2n1YLPRaLbZA-1)
 
 ![Exemplo de Diagrama de Fluxo](img/fluxotelasmobile.png)
 
