@@ -8,6 +8,8 @@ A escolha do referido problema foi definida por meio de discussões e estudos re
 
 ![Persona 1](img/persona_01.png)
 ![Persona 2](img/persona_02.png)
+![Persona 2](img/persona_3.png)
+![Persona 2](img/persona_4.png)
 
 ## Histórias de Usuários
 
@@ -15,11 +17,15 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Vanessa de Castro  | Quero adquirir produtos para o meu hobby receber pontos em troca | Trocar por itens a minha escolha |
-|Vanessa de Castro  | Quero ter a minha loja favorita | Acumular pontos em uma loja específica |
-|Rodrigo Maia| Ter controle e visibilidade da minha pontuação | Quero visualizar meus pontos a qualquer momento momento |
-|Rodrigo maia| Quero visualizar meus pedidos de resgate a qualquer momento | Ter controle sob o andamento do resgate |
-|Rodrigo maia| Quero visualizar meu histórico de resgate  | Ter visibilidade dos itens que já resgatei |
+|Vanessa de Castro | Quero adquirir produtos para o meu hobby receber pontos em troca | Trocar por itens a minha escolha |
+|Vanessa de Castro | Quero ter poder favoritar a  minha loja predileta | Acumular pontos em uma loja específica |
+|Rodrigo Maia | Ter controle e visibilidade da minha pontuação | Quero visualizar meus pontos a qualquer momento momento |
+|Rodrigo Maia | Quero visualizar meus pedidos de resgate a qualquer momento | Ter controle sob o andamento do resgate |
+|Rodrigo Maia | Quero visualizar meu histórico de resgate  | Ter visibilidade dos itens que já resgatei |
+|Thiago Leal | Quero poder cadastrar a minha loja | Captar mais clientes |
+|Thiago leal | Quero poder cadastrar produtos | Para que os meus clientes possam realizar a troca dos pontos |
+|Isabelle Melo | Ter controle e visibilidade da lista de clientes | Entender quem são os clientes mais fiéis |
+|Isabelle Melo | Quero visualizar os resgates dos clientes | Validar se o cliente já pode retirar o item escolhido |
 
 ## Modelagem do Processo de Negócio 
 
@@ -91,7 +97,7 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 07/07/2023. |
+|01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 10/12/2023. |
 |02| A equipe deverá utilizar específicamente react native no front end.         |
 |02| A equipe não poderá ter auxilios externos se de outros integrantes dela mesma para o desenvolvimento do projeto.     |
 
