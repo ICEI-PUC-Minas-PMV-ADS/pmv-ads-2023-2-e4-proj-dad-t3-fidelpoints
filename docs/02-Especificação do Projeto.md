@@ -35,7 +35,7 @@ Atualmente muitos usuários sentem falta uma plataforma específica de acumulo d
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Nossa aplicação visa recompensar os clientes por suas compras, incentivando a fidelidade às lojas participantes. Os clientes acumulam pontos que podem ser convertidos em descontos ou prêmios, enquanto os lojistas aumentam a retenção de clientes e impulsionam as vendas ao oferecerem cashback. O aplicativo cria um ecossistema benéfico para ambas as partes, promovendo uma relação de ganha-ganha entre clientes e lojistas.
 
 ### Processo 1 – NOME DO PROCESSO
 
