@@ -60,21 +60,35 @@ Obs.: todas as informações para gerar os indicadores devem estar no diagrama d
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+O escopo funcional do projeto é definido por meio dos requisitos funcionais que descrevem as possibilidades interação dos usuários, bem como os requisitos não funcionais que descrevem os aspectos que o sistema deverá apresentar de maneira geral. Estes requisitos são apresentados a seguir.
 
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O aplicativo deverá permitir que o usuário possa se cadastrar ou fazer login e desta forma tenha acesso às funcionalidades disponibilizadas.  | ALTA | 
+|RF-002| O aplicativo deverá permitir que o usuário redefina sua senha caso o mesmo se esqueceça dela.   | Alta |
+|RF-003| O aplicativo deve permitir o usuário verificar a quantidade de pontos.   | Alta |
+|RF-004| O aplicativo deverá permitir que o usuário pesquise por um produto específico em um campo de busca na tela inicial.   | Alta |
+|RF-005| O aplicativo deve permitir o usuário defina quantos pontos valem o seu produto .   | Alta |
+|RF-006| Na tela inicial o usuário deverá ter acesso a uma lista com os principais produtos recomendados pelo sistema.   | Média |
+|RF-007| O aplicativo deve permitir o usuário criar listas para armazenar determinados produtos.   | Média |
+|RF-008|O usuário deve ter a possibilidade de fazer a gestão de suas listas inserindo e removendo produtos.    | Média |
+|RF-009| O usuário deve poder criar e ordenar a quais produtos serão trocados.  | Baixa |
+|RF-010| O usuário deve poder ordenar a quantidade de pontos que vale o produto.   | Baixa |
+|RF-011| O aplicativo deve permitir que o usuário insira e remova produtos de acordo com a sua estrategia de vendas.   | Baixa |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O aplicativo deve ser publicado em um ambiente acessível publicamente. | Alta | 
+|RNF-002| O aplicativo deverá ser responsivo permitindo a visualização em um celular de forma adequada |  Alta | 
+|RNF-003| O aplicativo deve ser compatível com o sistema andriod |  Alta | 
+|RNF-004| O aplicativo deve ter bom nível de contraste entre os elementos da tela em conformidade  |  Média | 
+|RNF-005| O aplicativo deve ter um tema black para que deixe os usuários mais confortáveis durante o usuo. |  Média | 
+|RNF-006| O aplicativo deve utilizar cores e ícones que sejam mais intuitivos para o usuário final. |  Média | 
+|RNF-007| O aplicativo deve ser em português BR. |  BAIXA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
