@@ -147,7 +147,7 @@ Os gráficos foram feitos baseado nas tarefas das etapas do projeto.
 
 O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
 
-![Simple Project Timeline](img/02-project-timeline.png)
+![Simple Project Timeline](img/Cronograma%20de%20projeto.jpg)
 
 ## Gestão de Orçamento
 
