@@ -155,4 +155,4 @@ O orçamento foi feito para os 5 meses de projeto com valores de forma fictícia
 
 Recursos Humanos. Hardware. Rede e Lincenças. Software.
 
-![Orçamento](img/02-orcamento.png)
+![Orçamento](Orçamento_para_o_Projeto_Planilhas_Google.jpg)
