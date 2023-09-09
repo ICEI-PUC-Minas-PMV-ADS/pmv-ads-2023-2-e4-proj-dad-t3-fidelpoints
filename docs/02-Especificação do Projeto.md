@@ -153,6 +153,9 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 O orçamento foi feito para os 5 meses de projeto com valores de forma fictícia , baseada nos seguintes link :
 
-Recursos Humanos. Hardware. Rede e Lincenças. Software.
+ <a href="https://www.treasy.com.br/blog/orcamento-de-rh/#:~:text=O%20Or%C3%A7amento%20de%20RH%2C%20tamb%C3%A9m,ter%C3%A1%20relacionados%20a%20seus%20funcion%C3%A1rios."> Recursos Humanos</a>.
+ <a href="https://www.computerweekly.com/br/tip/Uma-analise-detalhada-dos-custos-de-hardware-de-servidor-para-PMEs"> Hardware</a>.
+ <a href="https://www.findup.com.br/custos-que-devem-ser-considerados-ao-montar-um-setor-de-ti/"> Rede e Lincenças</a>.
+ <a href="https://www.hsbs.com.br/como-o-custo-do-software-e-calculado/"> Software</a>.
 
 ![Orçamento](img/Or%C3%A7amento%20para%20o%20Projeto%20-%20Planilhas%20Google.jpg)
