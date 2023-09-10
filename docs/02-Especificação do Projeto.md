@@ -104,6 +104,8 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 ![Diagrama](img/diagrama.png)
 
+![Diagrama](img/diagrama_lojista.png)
+
 # Matriz de Rastreabilidade
 
 ![Matriz de rastreabilidade](img/MatrizDeRastreabilidade.JPG)
