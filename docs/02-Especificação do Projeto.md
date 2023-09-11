@@ -45,9 +45,25 @@ Nossa aplicação visa recompensar os clientes por suas compras, incentivando a 
 
 ![Processo 1](img/TL-2.png)
 
-### Processo 2 – TELA DE RESGASTE DE CLIENTE
+### Processo 3 – TELA DE RESGATE DE CLIENTE
 
 ![Processo 1](img/TL-3.png)
+
+### Processo 4 – TELA DE RESGATE DE CLIENTE-1
+
+![Processo 1](img/TL-4.png)
+
+### Processo 5 – TELA DE VISUALIZAR CARRINHO
+
+![Processo 1](img/TL-5.png)
+
+### Processo 6 – TELA DE VISUALIZAR LOJA E PRODUTOS
+
+![Processo 1](img/TL-6.png)
+
+### Processo 7 – TELA DE HISTÓRICO
+
+![Processo 1](img/TL-7.png)
 
 ## Indicadores de Desempenho
 
