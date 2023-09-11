@@ -43,7 +43,11 @@ Nossa aplicação visa recompensar os clientes por suas compras, incentivando a 
 
 ### Processo 2 – TELA DE CADASTRO
 
-![Processo 2](TL-2.png)
+![Processo 1](img/TL-2.png)
+
+### Processo 2 – TELA DE RESGASTE DE CLIENTE
+
+![Processo 1](img/TL-3.png)
 
 ## Indicadores de Desempenho
 
