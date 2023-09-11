@@ -37,11 +37,10 @@ Atualmente muitos usuários sentem falta uma plataforma específica de acumulo d
 
 Nossa aplicação visa recompensar os clientes por suas compras, incentivando a fidelidade às lojas participantes. Os clientes acumulam pontos que podem ser convertidos em descontos ou prêmios, enquanto os lojistas aumentam a retenção de clientes e impulsionam as vendas ao oferecerem cashback. O aplicativo cria um ecossistema benéfico para ambas as partes, promovendo uma relação de ganha-ganha entre clientes e lojistas.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – TELA INICIAL
+ 
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
-
-![Processo 1](img/02-bpmn-proc1.png)
+![Processo 1](img/TL-1.png)
 
 ### Processo 2 – NOME DO PROCESSO
 
