@@ -1,4 +1,4 @@
-package io.projeto.backend.fidelpoints.exception;
+package io.puc.projeto.fidelpoints.exception;
 
 public class RegraNegocioException extends RuntimeException{
 
