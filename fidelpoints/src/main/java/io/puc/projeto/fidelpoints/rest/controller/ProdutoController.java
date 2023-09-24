@@ -1,8 +1,8 @@
-package io.projeto.backend.fidelpoints.rest.controller;
+package io.puc.projeto.fidelpoints.rest.controller;
 
 
-import io.stephanie.backend.fidelpoints.domain.entity.Produto;
-import io.stephanie.backend.fidelpoints.domain.repository.ProdutosRepository;
+import io.puc.projeto.fidelpoints.domain.entity.Produto;
+import io.puc.projeto.fidelpoints.domain.repository.ProdutosRepository;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
