@@ -1,12 +1,12 @@
-package io.projeto.backend.fidelpoints.rest.controller;
+package io.puc.projeto.fidelpoints.rest.controller;
 
 
-import io.stephanie.backend.fidelpoints.domain.entity.Lojista;
-import io.stephanie.backend.fidelpoints.exception.SenhaInvalidaException;
-import io.stephanie.backend.fidelpoints.jwt.JwtService;
-import io.stephanie.backend.fidelpoints.rest.dto.CredenciaisDTO;
-import io.stephanie.backend.fidelpoints.rest.dto.TokenDTO;
-import io.stephanie.backend.fidelpoints.service.impl.LojistaServiceImpl;
+import io.puc.projeto.fidelpoints.domain.entity.Lojista;
+import io.puc.projeto.fidelpoints.exception.SenhaInvalidaException;
+import io.puc.projeto.fidelpoints.jwt.JwtService;
+import io.puc.projeto.fidelpoints.rest.dto.CredenciaisDTO;
+import io.puc.projeto.fidelpoints.rest.dto.TokenDTO;
+import io.puc.projeto.fidelpoints.service.impl.LojistaServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,7 +14,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-
 
 import javax.validation.Valid;
 
