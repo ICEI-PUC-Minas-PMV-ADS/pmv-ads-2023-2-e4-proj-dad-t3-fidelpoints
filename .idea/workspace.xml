@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a143000-ce73-41b6-ab94-f44a2498dc6f" name="Changes" comment="" />
+    <list default="true" id="9a143000-ce73-41b6-ab94-f44a2498dc6f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/FidelpointsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/FidelpointsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/controller/PedidoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/controller/PedidoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/AtualizaçãoStatusPedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/AtualizacaoStatusPedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/CredenciaisDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/CredenciaisDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/InformacaoItemPedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/InformacaoItemPedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/InformacoesPedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/InformacoesPedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/ItemPedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/ItemPedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/PedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/PedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/TokenDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/TokenDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/PedidoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/PedidoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/impl/LojistaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/impl/LojistaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/impl/PedidoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/impl/PedidoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/validation/NotEmptyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/validation/NotEmptyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/validation/constraintvalidation/NotEmptyListValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/validation/constraintvalidation/NotEmptyListValidator.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +36,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2UqkRQl0R3TKuYzVyKJWwfWwGjk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,9 +52,35 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/User/warzone/pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\warzone\pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="FidelpointsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.puc.projeto.fidelpoints.FidelpointsApplication" />
+      <module name="fidelpoints" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.puc.projeto.fidelpoints.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FidelpointsApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
