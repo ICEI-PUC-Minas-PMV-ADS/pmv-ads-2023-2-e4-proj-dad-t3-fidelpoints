@@ -1,8 +1,8 @@
-package io.projeto.backend.fidelpoints.service;
+package io.puc.projeto.fidelpoints.service;
 
-import io.stephanie.backend.fidelpoints.domain.entity.Pedido;
-import io.stephanie.backend.fidelpoints.domain.enums.StatusPedido;
-import io.stephanie.backend.fidelpoints.rest.dto.PedidoDTO;
+import io.puc.projeto.fidelpoints.domain.entity.Pedido;
+import io.puc.projeto.fidelpoints.domain.enums.StatusPedido;
+import io.puc.projeto.fidelpoints.rest.dto.PedidoDTO;
 
 import java.util.Optional;
 
