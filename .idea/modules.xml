@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/fidelpoints/fidelpoints.iml" filepath="$PROJECT_DIR$/fidelpoints/fidelpoints.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints.iml" filepath="$PROJECT_DIR$/.idea/pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints.iml" />
     </modules>
   </component>
