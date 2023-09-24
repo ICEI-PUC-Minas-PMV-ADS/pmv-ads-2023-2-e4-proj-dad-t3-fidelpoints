@@ -1,4 +1,4 @@
-package io.projeto.backend.fidelpoints.rest;
+package io.puc.projeto.fidelpoints.rest;
 
 import lombok.Getter;
 
