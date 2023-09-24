@@ -1,6 +1,6 @@
-package io.projeto.backend.fidelpoints.domain.repository;
+package io.puc.projeto.fidelpoints.domain.repository;
 
-import io.stephanie.backend.fidelpoints.domain.entity.Lojista;
+import io.puc.projeto.fidelpoints.domain.entity.Lojista;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
