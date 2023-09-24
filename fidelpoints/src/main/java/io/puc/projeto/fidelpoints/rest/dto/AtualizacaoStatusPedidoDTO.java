@@ -6,6 +6,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class AtualizaçãoStatusPedidoDTO {
+public class AtualizacaoStatusPedidoDTO {
     private String novoStatus;
 }
