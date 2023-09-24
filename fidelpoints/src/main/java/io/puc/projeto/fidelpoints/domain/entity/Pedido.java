@@ -1,6 +1,6 @@
-package io.projeto.backend.fidelpoints.domain.entity;
+package io.puc.projeto.fidelpoints.domain.entity;
 
-import io.stephanie.backend.fidelpoints.domain.enums.StatusPedido;
+import io.puc.projeto.fidelpoints.domain.enums.StatusPedido;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
