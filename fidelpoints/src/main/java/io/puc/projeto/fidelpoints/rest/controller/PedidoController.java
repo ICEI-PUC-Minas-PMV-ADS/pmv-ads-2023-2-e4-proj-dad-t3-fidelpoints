@@ -1,13 +1,13 @@
-package io.projeto.backend.fidelpoints.rest.controller;
+package io.puc.projeto.fidelpoints.rest.controller;
 
-import io.stephanie.backend.fidelpoints.domain.entity.ItemPedido;
-import io.stephanie.backend.fidelpoints.domain.entity.Pedido;
-import io.stephanie.backend.fidelpoints.domain.enums.StatusPedido;
-import io.stephanie.backend.fidelpoints.rest.dto.AtualizaçãoStatusPedidoDTO;
-import io.stephanie.backend.fidelpoints.rest.dto.InformacaoItemPedidoDTO;
-import io.stephanie.backend.fidelpoints.rest.dto.InformacoesPedidoDTO;
-import io.stephanie.backend.fidelpoints.rest.dto.PedidoDTO;
-import io.stephanie.backend.fidelpoints.service.PedidoService;
+import io.puc.projeto.fidelpoints.domain.entity.ItemPedido;
+import io.puc.projeto.fidelpoints.domain.entity.Pedido;
+import io.puc.projeto.fidelpoints.domain.enums.StatusPedido;
+import io.puc.projeto.fidelpoints.rest.dto.AtualizaçãoStatusPedidoDTO;
+import io.puc.projeto.fidelpoints.rest.dto.InformacaoItemPedidoDTO;
+import io.puc.projeto.fidelpoints.rest.dto.InformacoesPedidoDTO;
+import io.puc.projeto.fidelpoints.rest.dto.PedidoDTO;
+import io.puc.projeto.fidelpoints.service.PedidoService;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.util.CollectionUtils;
