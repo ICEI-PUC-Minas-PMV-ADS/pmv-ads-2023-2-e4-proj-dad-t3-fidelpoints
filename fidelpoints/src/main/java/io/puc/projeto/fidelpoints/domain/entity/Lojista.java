@@ -1,4 +1,4 @@
-package io.projeto.backend.fidelpoints.domain.entity;
+package io.puc.projeto.fidelpoints.domain.entity;
 
 
 import lombok.AllArgsConstructor;
