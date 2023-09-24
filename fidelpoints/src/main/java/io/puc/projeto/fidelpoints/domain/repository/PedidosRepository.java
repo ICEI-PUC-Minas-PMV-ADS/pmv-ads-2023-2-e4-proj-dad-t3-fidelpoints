@@ -1,7 +1,7 @@
-package io.projeto.backend.fidelpoints.domain.repository;
+package io.puc.projeto.fidelpoints.domain.repository;
 
-import io.stephanie.backend.fidelpoints.domain.entity.Cliente;
-import io.stephanie.backend.fidelpoints.domain.entity.Pedido;
+import io.puc.projeto.fidelpoints.domain.entity.Cliente;
+import io.puc.projeto.fidelpoints.domain.entity.Pedido;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
