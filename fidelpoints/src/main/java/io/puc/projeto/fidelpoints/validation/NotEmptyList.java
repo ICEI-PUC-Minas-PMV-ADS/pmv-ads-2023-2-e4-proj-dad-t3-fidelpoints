@@ -1,6 +1,6 @@
-package io.projeto.backend.fidelpoints.validation;
+package io.puc.projeto.fidelpoints.validation;
 
-import io.stephanie.backend.fidelpoints.validation.constraintvalidation.NotEmptyListValidator;
+import io.puc.projeto.fidelpoints.validation.constraintvalidation.NotEmptyListValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
