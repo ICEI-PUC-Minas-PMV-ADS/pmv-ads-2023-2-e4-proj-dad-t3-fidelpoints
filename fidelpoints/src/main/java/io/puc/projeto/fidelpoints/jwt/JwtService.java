@@ -1,12 +1,12 @@
-package io.projeto.backend.fidelpoints.jwt;
+package io.puc.projeto.fidelpoints.jwt;
 
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import io.stephanie.backend.fidelpoints.FidelpointsApplication;
-import io.stephanie.backend.fidelpoints.domain.entity.Lojista;
+import io.puc.projeto.fidelpoints.FidelpointsApplication;
+import io.puc.projeto.fidelpoints.domain.entity.Lojista;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
