@@ -1,4 +1,4 @@
-package io.projeto.backend.fidelpoints;
+package io.puc.projeto.fidelpoints;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
