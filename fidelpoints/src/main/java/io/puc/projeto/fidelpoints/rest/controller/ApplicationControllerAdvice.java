@@ -1,9 +1,9 @@
-package io.projeto.backend.fidelpoints.rest.controller;
+package io.puc.projeto.fidelpoints.rest.controller;
 
 
-import io.stephanie.backend.fidelpoints.exception.PedidoNaoEncontradoException;
-import io.stephanie.backend.fidelpoints.exception.RegraNegocioException;
-import io.stephanie.backend.fidelpoints.rest.ApiErrors;
+import io.puc.projeto.fidelpoints.exception.PedidoNaoEncontradoException;
+import io.puc.projeto.fidelpoints.exception.RegraNegocioException;
+import io.puc.projeto.fidelpoints.rest.ApiErrors;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
