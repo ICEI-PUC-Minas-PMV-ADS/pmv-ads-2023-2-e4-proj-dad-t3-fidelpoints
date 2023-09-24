@@ -1,4 +1,4 @@
-package io.projeto.backend.fidelpoints.domain.enums;
+package io.puc.projeto.fidelpoints.domain.enums;
 
 public enum StatusPedido {
 
