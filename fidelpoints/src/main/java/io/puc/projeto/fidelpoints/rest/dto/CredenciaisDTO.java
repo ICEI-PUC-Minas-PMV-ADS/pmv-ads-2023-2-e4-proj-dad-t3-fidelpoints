@@ -1,4 +1,4 @@
-package io.projeto.backend.fidelpoints.rest.dto;
+package io.puc.projeto.fidelpoints.rest.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
