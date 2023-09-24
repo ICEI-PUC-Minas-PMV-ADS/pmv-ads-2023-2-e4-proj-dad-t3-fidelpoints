@@ -1,8 +1,8 @@
-package io.projeto.backend.fidelpoints.service.impl;
+package io.puc.projeto.fidelpoints.service.impl;
 
-import io.stephanie.backend.fidelpoints.domain.entity.Lojista;
-import io.stephanie.backend.fidelpoints.domain.repository.LojistaRepository;
-import io.stephanie.backend.fidelpoints.exception.SenhaInvalidaException;
+import io.puc.projeto.fidelpoints.domain.entity.Lojista;
+import io.puc.projeto.fidelpoints.domain.repository.LojistaRepository;
+import io.puc.projeto.fidelpoints.exception.SenhaInvalidaException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
