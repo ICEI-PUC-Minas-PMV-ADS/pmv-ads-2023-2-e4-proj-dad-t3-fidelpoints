@@ -1,8 +1,8 @@
-package io.projeto.backend.fidelpoints.config;
+package io.puc.projeto.fidelpoints.config;
 
-import io.stephanie.backend.fidelpoints.jwt.JwtAuthFilter;
-import io.stephanie.backend.fidelpoints.jwt.JwtService;
-import io.stephanie.backend.fidelpoints.service.impl.LojistaServiceImpl;
+import io.puc.projeto.fidelpoints.jwt.JwtAuthFilter;
+import io.puc.projeto.fidelpoints.jwt.JwtService;
+import io.puc.projeto.fidelpoints.service.impl.LojistaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
