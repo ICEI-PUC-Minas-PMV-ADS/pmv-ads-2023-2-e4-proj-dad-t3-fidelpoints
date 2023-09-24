@@ -1,4 +1,4 @@
-package io.projeto.backend.fidelpoints.config;
+package io.puc.projeto.fidelpoints.config;
 
 
 import org.springframework.context.annotation.Bean;
