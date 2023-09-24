@@ -1,12 +1,11 @@
-package io.projeto.backend.fidelpoints.rest.dto;
+package io.puc.projeto.fidelpoints.rest.dto;
 
-import io.stephanie.backend.fidelpoints.validation.NotEmptyList;
+import io.puc.projeto.fidelpoints.validation.NotEmptyList;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
-import java.math.BigDecimal;
 import java.util.List;
 
 @Data
