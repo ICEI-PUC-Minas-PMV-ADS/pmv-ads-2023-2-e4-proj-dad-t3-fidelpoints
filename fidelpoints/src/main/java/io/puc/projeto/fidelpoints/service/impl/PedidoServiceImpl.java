@@ -1,20 +1,20 @@
-package io.projeto.backend.fidelpoints.service.impl;
+package io.puc.projeto.fidelpoints.service.impl;
 
 
-import io.stephanie.backend.fidelpoints.domain.entity.Cliente;
-import io.stephanie.backend.fidelpoints.domain.entity.ItemPedido;
-import io.stephanie.backend.fidelpoints.domain.entity.Pedido;
-import io.stephanie.backend.fidelpoints.domain.entity.Produto;
-import io.stephanie.backend.fidelpoints.domain.enums.StatusPedido;
-import io.stephanie.backend.fidelpoints.domain.repository.ClientesRepository;
-import io.stephanie.backend.fidelpoints.domain.repository.ItemsPedidoRepository;
-import io.stephanie.backend.fidelpoints.domain.repository.PedidosRepository;
-import io.stephanie.backend.fidelpoints.domain.repository.ProdutosRepository;
-import io.stephanie.backend.fidelpoints.exception.PedidoNaoEncontradoException;
-import io.stephanie.backend.fidelpoints.exception.RegraNegocioException;
-import io.stephanie.backend.fidelpoints.rest.dto.ItemPedidoDTO;
-import io.stephanie.backend.fidelpoints.rest.dto.PedidoDTO;
-import io.stephanie.backend.fidelpoints.service.PedidoService;
+import io.puc.projeto.fidelpoints.domain.entity.Cliente;
+import io.puc.projeto.fidelpoints.domain.entity.ItemPedido;
+import io.puc.projeto.fidelpoints.domain.entity.Pedido;
+import io.puc.projeto.fidelpoints.domain.entity.Produto;
+import io.puc.projeto.fidelpoints.domain.enums.StatusPedido;
+import io.puc.projeto.fidelpoints.domain.repository.ClientesRepository;
+import io.puc.projeto.fidelpoints.domain.repository.ItemsPedidoRepository;
+import io.puc.projeto.fidelpoints.domain.repository.PedidosRepository;
+import io.puc.projeto.fidelpoints.domain.repository.ProdutosRepository;
+import io.puc.projeto.fidelpoints.exception.PedidoNaoEncontradoException;
+import io.puc.projeto.fidelpoints.exception.RegraNegocioException;
+import io.puc.projeto.fidelpoints.rest.dto.ItemPedidoDTO;
+import io.puc.projeto.fidelpoints.rest.dto.PedidoDTO;
+import io.puc.projeto.fidelpoints.service.PedidoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
