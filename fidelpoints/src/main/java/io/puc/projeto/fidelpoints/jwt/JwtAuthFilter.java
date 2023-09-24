@@ -1,6 +1,6 @@
-package io.projeto.backend.fidelpoints.jwt;
+package io.puc.projeto.fidelpoints.jwt;
 
-import io.stephanie.backend.fidelpoints.service.impl.LojistaServiceImpl;
+import io.puc.projeto.fidelpoints.service.impl.LojistaServiceImpl;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
