@@ -3,7 +3,7 @@ package io.puc.projeto.fidelpoints.rest.controller;
 import io.puc.projeto.fidelpoints.domain.entity.ItemPedido;
 import io.puc.projeto.fidelpoints.domain.entity.Pedido;
 import io.puc.projeto.fidelpoints.domain.enums.StatusPedido;
-import io.puc.projeto.fidelpoints.rest.dto.AtualizaçãoStatusPedidoDTO;
+import io.puc.projeto.fidelpoints.rest.dto.AtualizacaoStatusPedidoDTO;
 import io.puc.projeto.fidelpoints.rest.dto.InformacaoItemPedidoDTO;
 import io.puc.projeto.fidelpoints.rest.dto.InformacoesPedidoDTO;
 import io.puc.projeto.fidelpoints.rest.dto.PedidoDTO;
@@ -54,7 +54,7 @@ public class PedidoController {
     @PatchMapping ("{id}")
     @ResponseStatus(NO_CONTENT)
     public void updateStatus( @PathVariable Integer id,
-                              @RequestBody AtualizaçãoStatusPedidoDTO atualizaçãoStatusPedidoDTO ){
+                              @RequestBody AtualizacaoStatusPedidoDTO atualizaçãoStatusPedidoDTO ){
         String novoStatus = atualizaçãoStatusPedidoDTO.getNovoStatus();
         pedidoService.atualizaStatus(id, StatusPedido.valueOf(novoStatus) );
 
