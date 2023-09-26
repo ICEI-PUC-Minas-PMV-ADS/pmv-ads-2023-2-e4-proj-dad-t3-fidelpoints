@@ -26,7 +26,7 @@ public class SwaggerConfig {
                 .useDefaultResponseMessages(false)
                 .select()
                 .apis(RequestHandlerSelectors
-                        .basePackage("io.github.stephanieingrid.rest.controller"))
+                        .basePackage(""))
                 .paths(PathSelectors.any())
                 .build()
                 .securityContexts(Arrays.asList(securityContext()))
@@ -46,9 +46,9 @@ public class SwaggerConfig {
     }
 
     private Contact contact(){
-        return new Contact("Stephanie Oliveira",
-                "https://github.com/Stephanie-Ingrid",
-                "stephanieoliveira.dev@gmail.com");
+        return new Contact("",
+                "",
+                "");
     }
 
 
