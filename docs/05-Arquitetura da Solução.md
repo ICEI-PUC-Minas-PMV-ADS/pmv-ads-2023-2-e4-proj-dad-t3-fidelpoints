@@ -12,7 +12,7 @@
 
 ## Esquema Relacional
 
-![Esquema Relacional](img/esquema_relacional.png)
+![Esquema Relacional](img/DiagramaDB.JPG)
 
 ## Modelo Físico
 
