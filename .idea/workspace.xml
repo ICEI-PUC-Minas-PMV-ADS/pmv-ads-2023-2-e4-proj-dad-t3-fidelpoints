@@ -6,11 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="9a143000-ce73-41b6-ab94-f44a2498dc6f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/entity/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/entity/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/controller/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/controller/LojistaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/controller/LojistaController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,36 +41,92 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/warzone/pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/User/warzone/pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\warzone\pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="io.puc.projeto.fidelpoints.rest.controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.puc.projeto.fidelpoints.rest.controller" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="FidelpointsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.puc.projeto.fidelpoints.FidelpointsApplication" />
+  <component name="RunManager" selected="JUnit.io.puc.projeto.fidelpoints.rest.controller in fidelpoints">
+    <configuration name="All in pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteControllerTest.salvarCliente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fidelpoints" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.puc.projeto.fidelpoints.*" />
+          <option name="PATTERN" value="io.puc.projeto.fidelpoints.rest.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="io.puc.projeto.fidelpoints.rest.controller" />
+      <option name="MAIN_CLASS_NAME" value="io.puc.projeto.fidelpoints.rest.controller.ClienteControllerTest" />
+      <option name="METHOD_NAME" value="salvarCliente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="io.puc.projeto.fidelpoints.rest.controller in fidelpoints" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fidelpoints" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.puc.projeto.fidelpoints.rest.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.puc.projeto.fidelpoints.rest.controller" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FidelpointsApplication" />
+        <item itemvalue="JUnit.io.puc.projeto.fidelpoints.rest.controller in fidelpoints" />
+        <item itemvalue="JUnit.ClienteControllerTest.salvarCliente" />
+        <item itemvalue="JUnit.All in pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints (2)" />
+        <item itemvalue="JUnit.All in pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints (1)" />
+        <item itemvalue="JUnit.All in pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints" />
       </list>
     </recent_temporary>
   </component>
