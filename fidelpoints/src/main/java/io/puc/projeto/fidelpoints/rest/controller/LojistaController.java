@@ -2,11 +2,13 @@ package io.puc.projeto.fidelpoints.rest.controller;
 
 
 import io.puc.projeto.fidelpoints.domain.entity.Lojista;
+import io.puc.projeto.fidelpoints.exception.RegraNegocioException;
 import io.puc.projeto.fidelpoints.exception.SenhaInvalidaException;
 import io.puc.projeto.fidelpoints.jwt.JwtService;
 import io.puc.projeto.fidelpoints.rest.dto.CredenciaisDTO;
 import io.puc.projeto.fidelpoints.rest.dto.TokenDTO;
 import io.puc.projeto.fidelpoints.service.impl.LojistaServiceImpl;
+import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,6 +24,7 @@ import static org.springframework.http.HttpStatus.CREATED;
 @RestController
 @RequestMapping("/api/usuarios")
 @RequiredArgsConstructor
+@Builder
 public class LojistaController {
 
     private final LojistaServiceImpl lojistaService;
@@ -32,6 +35,9 @@ public class LojistaController {
     @PostMapping
     @ResponseStatus(CREATED)
     public Lojista salvar(@RequestBody @Valid Lojista lojista) {
+        if( lojista.getLogin() == null ||  lojista.getLogin() == ""){
+            throw new RegraNegocioException("O nome do cliente nao foi informado");
+        }
         String senhaCriptografada = passwordEncoder.encode(lojista.getSenha());
         lojista.setSenha(senhaCriptografada);
         return lojistaService.salvar(lojista);
