@@ -3,6 +3,7 @@ package io.puc.projeto.fidelpoints.rest.controller;
 
 import io.puc.projeto.fidelpoints.domain.entity.Cliente;
 import io.puc.projeto.fidelpoints.domain.repository.ClientesRepository;
+import io.puc.projeto.fidelpoints.exception.RegraNegocioException;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
@@ -34,6 +35,9 @@ public class ClienteController {
     @PostMapping
     @ResponseStatus( HttpStatus.CREATED )
     public Cliente salvar ( @RequestBody @Valid Cliente cliente ){
+        if( cliente.getNome() == null ||  cliente.getNome() == ""){
+            throw new RegraNegocioException("O nome do cliente nao foi informado");
+        }
         return clientesRepository.save(cliente);
     }
 
@@ -57,10 +61,10 @@ public class ClienteController {
 
         clientesRepository
                 .findById(id)
-                .map( clienteExitente ->{
-                    cliente.setId( clienteExitente.getId() );
+                .map( clienteExistente ->{
+                    cliente.setId( clienteExistente.getId() );
                     clientesRepository.save( cliente );
-                    return clienteExitente;
+                    return clienteExistente;
                 }).orElseThrow( () -> new ResponseStatusException(
                         HttpStatus.NOT_FOUND,"Cliente não encontrado"));
         }

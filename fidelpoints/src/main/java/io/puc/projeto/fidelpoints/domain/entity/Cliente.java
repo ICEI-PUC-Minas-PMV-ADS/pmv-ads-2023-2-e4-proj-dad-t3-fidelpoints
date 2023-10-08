@@ -3,6 +3,7 @@ package io.puc.projeto.fidelpoints.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +14,7 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Entity
 @Table(name = "cliente")
 public class Cliente {
@@ -29,6 +31,7 @@ public class Cliente {
     @Column(name = "celular", length = 11)
     @NotEmpty( message = "{campo.celular.obrigatorio}")
     private String celular;
+
 
     @JsonIgnore
     @OneToMany( mappedBy = "cliente", fetch = FetchType.LAZY )

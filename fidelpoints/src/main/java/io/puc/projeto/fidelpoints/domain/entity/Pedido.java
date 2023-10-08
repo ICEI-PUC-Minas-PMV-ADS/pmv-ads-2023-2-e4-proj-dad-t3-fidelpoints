@@ -2,6 +2,7 @@ package io.puc.projeto.fidelpoints.domain.entity;
 
 import io.puc.projeto.fidelpoints.domain.enums.StatusPedido;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 @Table(name = "pedido")
 public class Pedido {
 
