@@ -1,0 +1,150 @@
+.cadProduct{
+   
+    background-color: #ffffff;
+    height: 500px;
+    width: 600px;
+    border-radius: 10px;
+    border: 1px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 1px 1px #999;
+  }
+  .editProduct{
+    background-color: #ffffff;
+    height: 530px;
+    width: 600px;
+    border-radius: 10px;
+    border: 1px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 1px 1px #999;
+  }
+  .divId{
+    display: flex;
+    height: 30px;
+  }
+  .divId h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+    width: 20px;
+    height: 25px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 0px;
+    padding: 2px;
+    margin-bottom: 4px;
+  }
+  .numberEdit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 25px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 2px 1px 1px #999;
+    margin-left: 5px;
+    margin-top: 3px;
+    margin-bottom: 4px;
+    padding: 2px;
+  }
+  .nameProduct{
+    margin-top: 2px;
+  }
+
+  button{
+    height: 30px;
+    width: 110px;
+    margin-right: 40px;
+    background-color: #356583;
+    cursor: pointer;
+    padding: 4px;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    margin-top: 10px;
+
+  }
+  .buttons{
+    display: flex;
+    justify-content:flex-end;
+  }
+  .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  img{
+    border: 0.5px;
+    height: 220px;
+    width: 200px;
+    margin-top: 0px;
+    display: block;
+    margin-top: 0;
+  }
+  input{
+    border: 1px solid gray;
+    height: 40px;
+    width: 220px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: left;
+    border-radius: 5px;
+    box-shadow: 2px 1px 1px #999;
+  }
+
+  .file{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+    height: 20px;
+  }
+  .point{
+    font-size: large;
+    color: rgb(115, 111, 111);
+    display: flex;
+  }
+  .point input{
+    height: 20px;
+    width: 50px;
+    border: none;
+    margin-left: 10px;
+  }
+  h2{
+    color: rgb(32, 133, 201);
+    text-align: center;
+  }
+
+  .layoutProduct{
+    background-color:#e8ebeb;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: max-content;
+    max-height: max-content;
+  }
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+label{
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+  
+
+  
