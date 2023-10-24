@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../Style/produtos.css';
 import { Link } from 'react-router-dom';
-import {fs as fs} from 'node:fs'
+//import {fs as fs} from 'node:fs'
 //import CadProduct from './CadProduct';
 
 function Product({postProduto}){
