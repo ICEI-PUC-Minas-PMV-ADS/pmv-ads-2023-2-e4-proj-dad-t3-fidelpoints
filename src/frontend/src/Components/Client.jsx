@@ -26,17 +26,16 @@ function Client({postProduto}){
             <h2>Lista de Clientes</h2>
             <div className="client">
                 <ul className='listClient'>
-                <li className='list'>
-                                <li>Foto</li>
-                                <li> Nome</li> 
-                                <li> Descrição:</li>
-                                <li> Pontos:</li>
-                                <li> Editar</li>
-                            </li>
+                    <li className='list'>
+                                <li className='cabecalho'> Nome</li> 
+                                <li className='cabecalho'> Descrição:</li>
+                                <li className='cabecalho'> Pontos:</li>
+                                <li className='cabecalho'> Editar</li>
+                    </li>
+                    <hr />
                     {client ?
                         client.map(p =>
                             <li className='list'>
-                                <li><img className='imgList' src= "#" alt='#'/></li>
                                 <li> {p.name} </li> 
                                 <li> {p.description} </li>
                                 <li> {p.points}</li>
