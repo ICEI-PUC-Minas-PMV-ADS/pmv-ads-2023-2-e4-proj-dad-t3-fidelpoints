@@ -8,7 +8,6 @@ function Navbar(){
         <div className="navbar">
             <Banner/>
             <ul className="ulMenu">
-                <li className="listNav"><Link to= '/'>Login</Link></li>
                 <li className="listNav"><Link to= '/CadProduct'>Cadastros de Produtos</Link></li>
                 <li className="listNav"><Link to= '/Product'>Produtos</Link></li>
                 <li className="listNav"><Link to= '/EditProduct'>Editar Produtos</Link></li>
