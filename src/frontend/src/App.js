@@ -10,6 +10,8 @@ import EditProduct from "./Components/editProduct";
 import RecuperarSenha from "./Components/RecuperarSenha";
 import RedefinirSenha from "./Components/RedefinirSenha";
 import CadastroCliente from "./Components/CadastroCliente";
+import Client from "./Components/Client";
+import EditClient from "./Components/editClient";
 
 
 function App() {
@@ -25,9 +27,10 @@ function App() {
         <Route path="/RecuperarSenha" element={<RecuperarSenha/>}/>
         <Route path="/RedefinirSenha" element={<RedefinirSenha/>}/>
         <Route path="/CadastroCliente" element={<CadastroCliente/>}/>
-            
+        <Route path="/EditClient" element={<EditClient/>}/>
         <Route path="/CadProduct" element={<CadProduct/>}/>
         <Route path="/Product" element={<Product/>}/>
+        <Route path="/Client" element={<Client/>}/>
         <Route path="/EditProduct" element={<EditProduct/>}/>
         
             
