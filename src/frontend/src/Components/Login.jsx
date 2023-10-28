@@ -9,12 +9,14 @@ const Login = () => {
 
     const[nome, setNome] = useState('')
     const[email, setEmail] = useState('')
+    const{ok, setOk} =useState(false)
 
 
 
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
+        setOk(true)
         console.log('Form foi submetido => ', nome, email, )
     }
 
@@ -38,7 +40,7 @@ const Login = () => {
                 aoAlterado = {valor => setEmail (valor)}
                 />
 
-            <Botao>
+            <Botao onClick = {onclick}>
             Conectar
             </Botao>
             </form>

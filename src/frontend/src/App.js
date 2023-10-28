@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes , Route } from "react-router-dom";
 import './Style/App.css';
-//import { useState } from 'react';
+import { useState } from 'react';
 import CadProduct from './Components/CadProduct';
 import Navbar from "./Layout/Navbar";
 import Login from "./Components/Login";
@@ -13,11 +13,11 @@ import CadastroCliente from "./Components/CadastroCliente";
 
 
 function App() {
-//  const[edg, setEdg] = useState("Edglei");
+  
   return (
 
     <Router>
-      <Navbar/>
+      <Navbar/>     
       <Routes>
         <Route exact path="/" element={<Login/>}/>
 

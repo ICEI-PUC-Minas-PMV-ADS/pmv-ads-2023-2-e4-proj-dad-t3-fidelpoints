@@ -5,7 +5,7 @@ import Banner from "../Components/Banner";
 
 function Navbar(){
     return(
-        <div>
+        <div className="navbar">
             <Banner/>
             <ul className="ulMenu">
                 <li className="listNav"><Link to= '/'>Login</Link></li>
