@@ -1,4 +1,5 @@
 
+import { Route, redirect } from "react-router-dom";
 import Botao from '../Components/Botao'
 import { useState } from 'react'
 import CampoTexto from '../Components/CampoTexto'
@@ -9,15 +10,21 @@ const Login = () => {
 
     const[nome, setNome] = useState('')
     const[email, setEmail] = useState('')
-    const{ok, setOk} =useState(false)
+    const[ok, setOk] = useState(false)
 
 
 
 
     const aoSalvar = (evento) => {
-        evento.preventDefault()
-        setOk(true)
+        evento.preventDefault()      
         console.log('Form foi submetido => ', nome, email, )
+        setOk (true)
+        if(ok === true){
+            <Route path="/" element={<Login/>} render = {redirect('/loged')}/>
+            console.log("passou aqui "+ ok)
+            
+        }
+        
     }
 
     return(

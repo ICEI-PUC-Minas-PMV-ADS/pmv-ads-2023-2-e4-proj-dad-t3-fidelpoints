@@ -3,7 +3,6 @@ import './Style/App.css';
 import { useState } from 'react';
 import CadProduct from './Components/CadProduct';
 import Navbar from "./Layout/Navbar";
-import Login from "./Components/Login";
 import CadastroLogista from "./Components/CadastroLogista";
 import Product from "./Components/Product";
 import EditProduct from "./Components/editProduct";
@@ -14,13 +13,14 @@ import Client from "./Components/Client";
 import EditClient from "./Components/editClient";
 
 
-function App() {
+function Loged() {
   
   return (
+
     <Router>
         <Navbar/>
       <Routes>
-      <Route path="/" element={<Login/>}/>
+        <Route path="/Loged" element={<Loged/>}/>
         <Route path="/CadastroLogista" element={<CadastroLogista/>}/>
         <Route path="/RecuperarSenha" element={<RecuperarSenha/>}/>
         <Route path="/RedefinirSenha" element={<RedefinirSenha/>}/>
@@ -30,10 +30,13 @@ function App() {
         <Route path="/Product" element={<Product/>}/>
         <Route path="/Client" element={<Client/>}/>
         <Route path="/EditProduct" element={<EditProduct/>}/>
-                
+        
+            
       </Routes>
+      
     </Router>    
   );
 }
 
-export default App;
+export default Loged;
+
