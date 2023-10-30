@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fidelpoints", "Fidelpoints\Fidelpoints.csproj", "{5809CA4D-EF05-41D9-A451-E469E3343133}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5809CA4D-EF05-41D9-A451-E469E3343133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5809CA4D-EF05-41D9-A451-E469E3343133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5809CA4D-EF05-41D9-A451-E469E3343133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5809CA4D-EF05-41D9-A451-E469E3343133}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4701507D-37E8-4494-8357-E97302EFB0CA}
+	EndGlobalSection
+EndGlobal
