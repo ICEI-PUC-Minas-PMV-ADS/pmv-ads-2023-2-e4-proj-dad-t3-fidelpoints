@@ -8,7 +8,7 @@
 
 ## Indicadores de Desempenho
 
-![INDICADORES DE DESEMPENHO](img/DADOS_FIDELPOINT.png)
+![INDICADORES DE DESEMPENHO](img/DADOS%FIDELPOINT.png)
 
 ## Modelo ER
 
