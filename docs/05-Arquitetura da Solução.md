@@ -8,7 +8,7 @@
 
 ## Indicadores de Desempenho
 
-![INDICADORES DE DESEMPENHO](docs/img/dados.png)
+![INDICADORES DE DESEMPENHO](img/dados.png)
 
 ## Modelo ER
 
