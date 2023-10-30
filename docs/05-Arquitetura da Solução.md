@@ -6,6 +6,10 @@
 
 ![Diagrama de Classes](img/diagrama_2.png)
 
+## Indicadores de Desempenho
+
+![INDICADORES DE DESEMPENHO](img/DADOS_FIDELPOINT.png)
+
 ## Modelo ER
 
 ![Entidade Relacionamento](img/DER.png)
