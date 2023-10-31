@@ -1,41 +1,56 @@
-import { BrowserRouter as Router, Routes , Route } from "react-router-dom";
-import './Style/App.css';
 import { useState } from 'react';
-import CadProduct from './Components/CadProduct';
-import Navbar from "./Layout/Navbar";
-import CadastroLogista from "./Components/CadastroLogista";
-import Product from "./Components/Product";
-import EditProduct from "./Components/editProduct";
-import RecuperarSenha from "./Components/RecuperarSenha";
-import RedefinirSenha from "./Components/RedefinirSenha";
-import CadastroCliente from "./Components/CadastroCliente";
-import Client from "./Components/Client";
-import EditClient from "./Components/editClient";
-
+import '../Style/client.css';
+//import { Link } from 'react-router-dom';
+//import {fs as fs} from 'node:fs'
+//import CadClient from './CadClient';
 
 function Loged() {
   
-  return (
+    const [pedidos,/* setClient*/] = useState([
+        {'name':"Edglei", 'Product':"Só testando pra ver",'clientPoints': "200", 'points':"200"},
+        {'name':"Edivania", 'Product':"Só testando pra ver",'clientPoints': "150", 'points':"400"},
+        {'name':"Ana", 'Product':"Só testando pra ver",'clientPoints': "800", 'points':"40"}
+        ]);
+/*    function table(){
+    //    fs.readFile ("Client.json", (err, data) => setClient(JSON.parse(data)))
+       return(
+        <h2>Não sei</h2>
+       )
 
-    <Router>
-        <Navbar/>
-      <Routes>
-        <Route path="/Loged" element={<Loged/>}/>
-        <Route path="/CadastroLogista" element={<CadastroLogista/>}/>
-        <Route path="/RecuperarSenha" element={<RecuperarSenha/>}/>
-        <Route path="/RedefinirSenha" element={<RedefinirSenha/>}/>
-        <Route path="/CadastroCliente" element={<CadastroCliente/>}/>
-        <Route path="/EditClient" element={<EditClient/>}/>
-        <Route path="/CadProduct" element={<CadProduct/>}/>
-        <Route path="/Product" element={<Product/>}/>
-        <Route path="/Client" element={<Client/>}/>
-        <Route path="/EditProduct" element={<EditProduct/>}/>
-        
+
+       
+
+    }*/
+    
+    return(
+        <div className="layoutClient">
+            <h2>Lista de pedidos</h2>
+            <div className="client">
+                <ul className='listClient'>
+                    <li className='list'>
+                                <li className='cabecalho'> Cliente</li>
+                                <li className='cabecalho'> Pontos Clientes</li> 
+                                <li className='cabecalho'> Produtos</li>
+                                <li className='cabecalho'> Pontos Protudo:</li>
+                                
+                    </li>
+                    <hr />
+                    {pedidos ?
+                        pedidos.map(p =>
+                            <li className='list'>
+                                <li> {p.name} </li>
+                                <li>{p.clientPoints}</li> 
+                                <li> {p.Product} </li>
+                                <li> {p.points}</li>
+                                
+                            </li>)
+                        : <h2>Cliente não cadastrado</h2>
+                    }
+                </ul>
+            </div>
             
-      </Routes>
-      
-    </Router>    
-  );
+        </div>
+    )
 }
 
 export default Loged;

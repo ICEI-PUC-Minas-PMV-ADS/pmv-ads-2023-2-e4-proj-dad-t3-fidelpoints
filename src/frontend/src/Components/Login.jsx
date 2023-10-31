@@ -1,5 +1,5 @@
 
-import { Route, redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Botao from '../Components/Botao'
 import { useState } from 'react'
 import CampoTexto from '../Components/CampoTexto'
@@ -11,6 +11,7 @@ const Login = () => {
     const[nome, setNome] = useState('')
     const[email, setEmail] = useState('')
     const[ok, setOk] = useState(false)
+    const navigate = useNavigate();
 
 
 
@@ -19,8 +20,10 @@ const Login = () => {
         evento.preventDefault()      
         console.log('Form foi submetido => ', nome, email, )
         setOk (true)
+        console.log("Entrou aui e ok é" + ok)
+        
         if(ok === true){
-            <Route path="/" element={<Login/>} render = {redirect('/loged')}/>
+            navigate("/loged")
             console.log("passou aqui "+ ok)
             
         }
