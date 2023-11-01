@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../Style/produtos.css';
 import { Link } from 'react-router-dom';
+import Navbar from '../Layout/Navbar';
 //import {fs as fs} from 'node:fs'
 //import CadProduct from './CadProduct';
 
@@ -23,6 +24,7 @@ function Product({postProduto}){
     
     return(
         <div className="layoutProdutos">
+            <Navbar/>
             <h2>Lista de produtos</h2>
             <div className="produtos">
                 <ul className='listProduct'>

@@ -3,6 +3,7 @@ import Botao from '../Components/Botao'
 import { useState } from 'react'
 import CampoTexto from '../Components/CampoTexto'
 import '../Style/CadastroLogista.css'
+import Navbar from '../Layout/Navbar'
 
 const CadastroLogista = () => {
 
@@ -21,54 +22,57 @@ const CadastroLogista = () => {
     }
 
     return (
-        <section className="formulario">
-            <form onSubmit={aoSalvar}>
-                <h2>Preencha os campos a baixo para se conectar</h2>
-                <CampoTexto
-                    obrigatorio={true}
-                    label="Nome"
-                    placeholderModificada="Digite seu nome..."
-                    valor={nome}
-                    aoAlterado={valor => setNome(valor)}
-                />
+        <div>
+            <Navbar/>
+            <section className="formulario">
+                <form onSubmit={aoSalvar}>
+                    <h2>Preencha os campos a baixo para se conectar</h2>
+                    <CampoTexto
+                        obrigatorio={true}
+                        label="Nome"
+                        placeholderModificada="Digite seu nome..."
+                        valor={nome}
+                        aoAlterado={valor => setNome(valor)}
+                    />
 
-                <CampoTexto
-                    obrigatorio={true}
-                    label="Cnpj"
-                    placeholderModificada="Digite seu CNPJ..."
-                    valor={cnpj}
-                    aoAlterado={valor => setCnpj(valor)}
-                />
+                    <CampoTexto
+                        obrigatorio={true}
+                        label="Cnpj"
+                        placeholderModificada="Digite seu CNPJ..."
+                        valor={cnpj}
+                        aoAlterado={valor => setCnpj(valor)}
+                    />
 
-                <CampoTexto
-                    obrigatorio={true}
-                    label="Email"
-                    placeholderModificada="Digite seu email..."
-                    valor={email}
-                    aoAlterado={valor => setEmail(valor)}
-                />
+                    <CampoTexto
+                        obrigatorio={true}
+                        label="Email"
+                        placeholderModificada="Digite seu email..."
+                        valor={email}
+                        aoAlterado={valor => setEmail(valor)}
+                    />
 
-                <CampoTexto
-                    obrigatorio={true}
-                    label="Senha"
-                    placeholderModificada="Digite sua Senha..."
-                    valor={senha}
-                    aoAlterado={valor => setSenha(valor)}
-                />
+                    <CampoTexto
+                        obrigatorio={true}
+                        label="Senha"
+                        placeholderModificada="Digite sua Senha..."
+                        valor={senha}
+                        aoAlterado={valor => setSenha(valor)}
+                    />
 
-                <CampoTexto
-                    obrigatorio={true}
-                    label="Confirmar Senha"
-                    placeholderModificada="Confirme sua Senha..."
-                    valor={confirmarSenha}
-                    aoAlterado={valor => setConfirmarSenha(valor)}
-                />
+                    <CampoTexto
+                        obrigatorio={true}
+                        label="Confirmar Senha"
+                        placeholderModificada="Confirme sua Senha..."
+                        valor={confirmarSenha}
+                        aoAlterado={valor => setConfirmarSenha(valor)}
+                    />
 
-                <Botao>
-                    Cadastrar
-                </Botao>
-            </form>
-        </section>
+                    <Botao>
+                        Cadastrar
+                    </Botao>
+                </form>
+            </section>
+        </div>
     )
 }
 

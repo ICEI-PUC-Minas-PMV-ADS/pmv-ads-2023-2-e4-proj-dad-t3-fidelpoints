@@ -1,4 +1,4 @@
-.produtos{
+.client{
    
     background-color: #ffffff;
     height: 500px;
@@ -8,7 +8,7 @@
     display: flex;
     box-shadow: 2px 1px 1px #999;
   }
-.layoutProdutos{
+.layoutClient{
     background-color:#e8ebeb;
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
@@ -20,7 +20,7 @@
     max-height: max-content;
 
 }
-.listProduct{
+.listClient{
     display: flex;
     flex-direction: column;
 }

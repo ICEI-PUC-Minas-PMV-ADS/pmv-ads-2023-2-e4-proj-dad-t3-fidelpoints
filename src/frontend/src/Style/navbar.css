@@ -1,10 +1,13 @@
+.navbar{
+    width: 100%;
+}
 .ulMenu{
     margin-left: 2px;
     padding-left: 2px;
-    border: 3px rgb(77, 77, 141) solid;
-    border-radius: 5px;
-    width: 120px;
-    box-shadow: 4px 2px 1px  rgb(99, 107, 147); ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
 }
 .listNav{
     display: flex;
@@ -13,6 +16,7 @@
     list-style: none;
     font-size: 12px;
     font-family: Arial;
+    width: 100%;
 }
 .hrMenu{
     margin-left: 0px;
@@ -20,4 +24,7 @@
     padding-left: 0px;
     height: 5px;
     width: auto;
+}
+.cabecalho{
+    color: blue;
 }
