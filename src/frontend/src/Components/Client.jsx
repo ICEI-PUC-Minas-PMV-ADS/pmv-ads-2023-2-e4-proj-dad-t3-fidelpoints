@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../Style/client.css';
 import { Link } from 'react-router-dom';
+import Navbar from '../Layout/Navbar';
 //import {fs as fs} from 'node:fs'
 //import CadClient from './CadClient';
 
@@ -23,6 +24,7 @@ function Client({postProduto}){
     
     return(
         <div className="layoutClient">
+            <Navbar/>
             <h2>Lista de Clientes</h2>
             <div className="client">
                 <ul className='listClient'>

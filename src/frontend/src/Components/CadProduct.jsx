@@ -1,5 +1,6 @@
 import { useState,/* useEffect */ } from "react";
 import '../Style/cadProduct.css'
+import Navbar from "../Layout/Navbar";
 //import Product from "./Product";
 //import { json } from "react-router-dom";
 //import foto from '../Image/fotoCracha.jpg'
@@ -54,7 +55,9 @@ function CadProduct(props){
         setPostProduct("");
     }
     return(
-        <div className="layoutProduct"><h2>Cadastro de produtos</h2>
+        <div className="layoutProduct">
+            <Navbar/>
+            <h2>Cadastro de produtos</h2>
             <div className="cadProduct">
                 
                 <div className="content">

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../Style/client.css';
+import Navbar from '../Layout/Navbar';
 //import { Link } from 'react-router-dom';
 //import {fs as fs} from 'node:fs'
 //import CadClient from './CadClient';
@@ -24,6 +25,7 @@ function Loged() {
     
     return(
         <div className="layoutClient">
+            <Navbar/>
             <h2>Lista de pedidos</h2>
             <div className="client">
                 <ul className='listClient'>
@@ -32,7 +34,6 @@ function Loged() {
                                 <li className='cabecalho'> Pontos Clientes</li> 
                                 <li className='cabecalho'> Produtos</li>
                                 <li className='cabecalho'> Pontos Protudo:</li>
-                                
                     </li>
                     <hr />
                     {pedidos ?

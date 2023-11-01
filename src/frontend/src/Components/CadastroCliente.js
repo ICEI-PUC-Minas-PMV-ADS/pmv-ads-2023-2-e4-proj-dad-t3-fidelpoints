@@ -3,6 +3,7 @@ import Botao from '../Components/Botao'
 import { useState } from 'react'
 import CampoTexto from '../Components/CampoTexto'
 import '../Style/CadastroCliente.css'
+import Navbar from '../Layout/Navbar'
 
 const CadastroCliente = () => {
 
@@ -20,39 +21,43 @@ const CadastroCliente = () => {
     }
 
     return (
-        <section className="formulario">
-            <form onSubmit={aoSalvar}>
-                <h2>Preencha os campos a baixo com os dados do cliente</h2>
-                <CampoTexto
-                    obrigatorio={true}
-                    label="Nome"
-                    placeholderModificada="Nome Cliente..."
-                    valor={nome}
-                    aoAlterado={valor => setNome(valor)}
-                />
+        <div>
+            <Navbar/>
+            <section className="formulario">
+            
+                <form onSubmit={aoSalvar}>
+                    <h2>Preencha os campos a baixo com os dados do cliente</h2>
+                    <CampoTexto
+                        obrigatorio={true}
+                        label="Nome"
+                        placeholderModificada="Nome Cliente..."
+                        valor={nome}
+                        aoAlterado={valor => setNome(valor)}
+                    />
 
-                <CampoTexto
-                    obrigatorio={true}
-                    label="Celular"
-                    placeholderModificada="Celular Cliente"
-                    valor={celular}
-                    aoAlterado={valor => setCelular(valor)}
-                />
+                    <CampoTexto
+                        obrigatorio={true}
+                        label="Celular"
+                        placeholderModificada="Celular Cliente"
+                        valor={celular}
+                        aoAlterado={valor => setCelular(valor)}
+                    />
 
-                <CampoTexto
-                    obrigatorio={true}
-                    label="Pontos"
-                    placeholderModificada="Pontos Cliente"
-                    valor={celular}
-                    aoAlterado={valor => setPontos(valor)}
-                />
+                    <CampoTexto
+                        obrigatorio={true}
+                        label="Pontos"
+                        placeholderModificada="Pontos Cliente"
+                        valor={celular}
+                        aoAlterado={valor => setPontos(valor)}
+                    />
 
-                <Botao>
-                    Pontuar
-                </Botao>
+                    <Botao>
+                        Pontuar
+                    </Botao>
 
-            </form>
-        </section>
+                </form>
+            </section>
+        </div>
     )
 }
 
