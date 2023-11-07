@@ -39,7 +39,17 @@ export default function Rescue() {
 
     <View style={styles.container}>
         <Header title = "Resgate de pontos"/>
-        <List.Item style={styles.listFirst} title='Loja' right={() => <List.Item title= 'Produto'/>}/>
+        <List.Item 
+          titleStyle={{fontWeight: 'bold'}} 
+          style={styles.listFirst} 
+          title='Loja' 
+          right={() => 
+            <List.Item 
+              titleStyle={{fontWeight: 'bold'}} 
+              title= 'Produto'
+            />
+          }
+        />
         <Divider style={{height: 3, backgroundColor: "#0025bf"}} />
         <View style={{color: '#000', height:10 }}/>
         <FlatList
