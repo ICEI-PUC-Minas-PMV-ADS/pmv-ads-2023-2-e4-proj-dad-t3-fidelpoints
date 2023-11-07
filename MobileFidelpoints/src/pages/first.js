@@ -39,7 +39,17 @@ export default function First() {
 
     <View style={styles.container}>
         <Header title = "Pedidos de produto"/>
-        <List.Item style={styles.listFirst} title='Produto' right={() => <List.Item title= 'Pontos'/>}/>
+        <List.Item 
+          titleStyle={{fontWeight: "bold"}} 
+          style={styles.listFirst} 
+          title='Produto' 
+          right={() => 
+            <List.Item 
+              titleStyle={{fontWeight: "bold"}} 
+              title= 'Pontos'
+            />
+          }
+        />
         <Divider style={{height: 3, backgroundColor: "#0025bf"}} />
         <View style={{color: '#000', height:10 }}/>
         <FlatList
