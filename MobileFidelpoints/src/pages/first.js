@@ -1,23 +1,24 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList } from 'react-native';
-import { List, Divider } from 'react-native-paper';
+import { List, Divider, Button } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import Header from '../components/Header';
+import { useNavigation } from '@react-navigation/core';
 
 const DATA = [
     {
         ID: 1,
-        loja: 'Edglei',
+        produto: 'Copo Cooler',
         point: 200,
     },
     {
         ID: 2,
-        loja: 'Ana',
+        produto: 'Racket',
         point: 400,
     },
     {
         ID:3,
-        loja: 'Edivania',
+        produto: 'Pipoqueira',
         point: 600
     }
 ];
@@ -30,8 +31,8 @@ const Item = ({title}) => (
 
 export default function First() {
 
-
-    const renderItem = ({item}) => (<><List.Item title={item.loja} 
+    const navigation = useNavigation();
+    const renderItem = ({item}) => (<><List.Item title={item.produto} 
     right={() => <List.Item title ={item.point}/> }
      />
      <Divider theme={{ colors: { primary: 'green' } }} /></>)
@@ -57,6 +58,13 @@ export default function First() {
         renderItem={renderItem}
         keyExtractor={item => item.ID}
       />
+        <Button 
+          icon="cart-outline"
+          style={{width: 20}} 
+          buttonColor='#0025bf' 
+          mode="contained" 
+          onPress={() => navigation.navigate("Rescue")}>
+        </Button>
         <StatusBar style="auto" />
     </View>
     

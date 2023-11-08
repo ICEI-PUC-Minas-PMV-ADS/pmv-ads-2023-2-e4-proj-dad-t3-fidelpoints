@@ -1,16 +1,16 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Appbar } from 'react-native-paper';
-import First from './src/pages/first';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import Rescue from './src/pages/Rescue';
+import { NavigationContainer } from '@react-navigation/native';
+import Home from './src/pages/home';
 
 export default function App() {
 
   return (
-    <SafeAreaProvider>
-    <Rescue/>
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <SafeAreaProvider>
+        <Home/>
+      </SafeAreaProvider>
+    </NavigationContainer>
   );
 }
 
