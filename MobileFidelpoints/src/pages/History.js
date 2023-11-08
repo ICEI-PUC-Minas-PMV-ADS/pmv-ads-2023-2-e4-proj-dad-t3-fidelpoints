@@ -7,18 +7,18 @@ import Header from '../components/Header';
 const DATA = [
     {
         ID: 1,
-        loja: 'Edglei',
-        point: 200,
+        loja: 'Lótus',
+        produto: 'Mouse Wireless',
     },
     {
         ID: 2,
-        loja: 'Ana',
-        point: 400,
+        loja: 'Bela Boutique',
+        produto: 'Multivitamínico',
     },
     {
         ID:3,
-        loja: 'Edivania',
-        point: 600
+        loja: 'Chique Demais',
+        produto: 'Sabonete líquido'
     }
 ];
 
@@ -28,17 +28,17 @@ const Item = ({title}) => (
     </View>
   );
 
-export default function Rescue() {
+export default function History() {
 
 
     const renderItem = ({item}) => (<><List.Item title={item.loja} 
-    right={() => <List.Item title ={item.point}/> }
+    right={() => <List.Item title ={item.produto}/> }
      />
      <Divider theme={{ colors: { primary: 'green' } }} /></>)
   return (
 
     <View style={styles.container}>
-        <Header title = "Resgate de pontos"/>
+        <Header title = "Histórico de Resgate"/>
         <List.Item 
           titleStyle={{fontWeight: 'bold'}} 
           style={styles.listFirst} 
@@ -46,7 +46,7 @@ export default function Rescue() {
           right={() => 
             <List.Item 
               titleStyle={{fontWeight: 'bold'}} 
-              title= 'Pontos'
+              title= 'Produto'
             />
           }
         />
@@ -62,6 +62,7 @@ export default function Rescue() {
     
     );
 }
+
 
 const styles = StyleSheet.create({
     container: {

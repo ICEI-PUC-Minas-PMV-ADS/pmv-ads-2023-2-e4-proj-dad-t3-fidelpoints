@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, FlatList } from 'react-native';
+import {View, Text, TextInput, StyleSheet, FlatList, SafeAreaView } from 'react-native';
 import { List, Divider } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import Header from '../components/Header';
@@ -7,18 +7,18 @@ import Header from '../components/Header';
 const DATA = [
     {
         ID: 1,
-        loja: 'Edglei',
-        point: 200,
+        produto: 'Mouse Wireless',
+        quantidade: <TextInput>
+        lable = 'quantidade'
+        </TextInput>
     },
     {
         ID: 2,
-        loja: 'Ana',
-        point: 400,
+        produto: 'Teclado Wireless',
     },
     {
         ID:3,
-        loja: 'Edivania',
-        point: 600
+        produto: 'Suporte para Notebook'
     }
 ];
 
@@ -28,25 +28,25 @@ const Item = ({title}) => (
     </View>
   );
 
-export default function Rescue() {
+export default function History() {
 
 
-    const renderItem = ({item}) => (<><List.Item title={item.loja} 
-    right={() => <List.Item title ={item.point}/> }
+    const renderItem = ({item}) => (<><List.Item title={item.produto} 
+    right={() => <List.Item title ={item.loja}/> }
      />
      <Divider theme={{ colors: { primary: 'green' } }} /></>)
   return (
 
     <View style={styles.container}>
-        <Header title = "Resgate de pontos"/>
+        <Header title = "Loja Lótus"/>
         <List.Item 
           titleStyle={{fontWeight: 'bold'}} 
           style={styles.listFirst} 
-          title='Loja' 
+          title='Produto' 
           right={() => 
             <List.Item 
               titleStyle={{fontWeight: 'bold'}} 
-              title= 'Pontos'
+              title= 'Quantidade'
             />
           }
         />
@@ -63,6 +63,7 @@ export default function Rescue() {
     );
 }
 
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -72,3 +73,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold' ,
         marginTop: 50 }
   });
+
+
+
+  
