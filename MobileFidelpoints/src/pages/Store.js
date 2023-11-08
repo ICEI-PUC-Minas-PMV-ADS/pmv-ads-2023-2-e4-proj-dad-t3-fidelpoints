@@ -1,25 +1,24 @@
 import React from 'react';
-import {View, Text, StyleSheet, FlatList } from 'react-native';
-import { List, Divider, Button } from 'react-native-paper';
+import {View, Text, TextInput, StyleSheet, FlatList, SafeAreaView } from 'react-native';
+import { List, Divider } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import Header from '../components/Header';
-import { useNavigation } from '@react-navigation/core';
 
 const DATA = [
     {
         ID: 1,
-        loja: 'Edglei Sports LTDA',
-        point: 200,
+        produto: 'Mouse Wireless',
+        quantidade: <TextInput>
+        lable = 'quantidade'
+        </TextInput>
     },
     {
         ID: 2,
-        loja: 'Ana Bebidas e CIA',
-        point: 400,
+        produto: 'Teclado Wireless',
     },
     {
         ID:3,
-        loja: 'Edivania Cosméticos',
-        point: 600
+        produto: 'Suporte para Notebook'
     }
 ];
 
@@ -29,25 +28,25 @@ const Item = ({title}) => (
     </View>
   );
 
-export default function Rescue() {
+export default function History() {
 
-    const navigation = useNavigation();
-    const renderItem = ({item}) => (<><List.Item title={item.loja} 
-    right={() => <List.Item title ={item.point}/> }
+
+    const renderItem = ({item}) => (<><List.Item title={item.produto} 
+    right={() => <List.Item title ={item.loja}/> }
      />
      <Divider theme={{ colors: { primary: 'green' } }} /></>)
   return (
 
     <View style={styles.container}>
-        <Header title = "Resgate de pontos"/>
+        <Header title = "Loja Lótus"/>
         <List.Item 
           titleStyle={{fontWeight: 'bold'}} 
           style={styles.listFirst} 
-          title='Loja' 
+          title='Produto' 
           right={() => 
             <List.Item 
               titleStyle={{fontWeight: 'bold'}} 
-              title= 'Pontos'
+              title= 'Quantidade'
             />
           }
         />
@@ -58,19 +57,12 @@ export default function Rescue() {
         renderItem={renderItem}
         keyExtractor={item => item.ID}
       />
-        <Button 
-          icon="shopping" 
-          style={{width: 20}} 
-          buttonColor='#0025bf' 
-          mode="contained" 
-          onPress={() => navigation.navigate('First')}>
-        </Button>
-        <StatusBar style="auto" />
         <StatusBar style="auto" />
     </View>
     
     );
 }
+
 
 const styles = StyleSheet.create({
     container: {
@@ -81,3 +73,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold' ,
         marginTop: 50 }
   });
+
+
+
+  
