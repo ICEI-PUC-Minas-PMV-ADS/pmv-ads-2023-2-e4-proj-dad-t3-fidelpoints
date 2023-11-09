@@ -1,8 +1,10 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList } from 'react-native';
-import { List, Divider } from 'react-native-paper';
+import { List, Divider, Button } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import Header from '../components/Header';
+import { useNavigation } from '@react-navigation/core';
+
 
 const DATA = [
     {
@@ -29,7 +31,7 @@ const Item = ({title}) => (
   );
 
 export default function History() {
-
+    const navigation = useNavigation();
 
     const renderItem = ({item}) => (<><List.Item title={item.loja} 
     right={() => <List.Item title ={item.produto}/> }
@@ -57,6 +59,14 @@ export default function History() {
         renderItem={renderItem}
         keyExtractor={item => item.ID}
       />
+
+        <Button 
+          icon="cart-outline" 
+          style={{width: 20}} 
+          buttonColor='#0025bf' 
+          mode="contained" 
+          onPress={() => navigation.navigate('Rescue')}>
+        </Button>
         <StatusBar style="auto" />
     </View>
     

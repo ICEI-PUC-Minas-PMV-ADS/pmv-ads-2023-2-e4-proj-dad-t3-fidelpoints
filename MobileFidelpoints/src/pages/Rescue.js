@@ -4,6 +4,7 @@ import { List, Divider, Button } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import Header from '../components/Header';
 import { useNavigation } from '@react-navigation/core';
+import History from './History';
 
 const DATA = [
     {

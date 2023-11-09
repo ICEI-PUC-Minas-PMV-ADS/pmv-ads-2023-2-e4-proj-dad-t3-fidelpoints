@@ -39,7 +39,7 @@ export default function First() {
   return (
 
     <View style={styles.container}>
-        <Header title = "Pedidos de produto"/>
+        <Header title = "Edglei Sports LTDA"/>
         <List.Item 
           titleStyle={{fontWeight: "bold"}} 
           style={styles.listFirst} 
@@ -59,11 +59,11 @@ export default function First() {
         keyExtractor={item => item.ID}
       />
         <Button 
-          icon="cart-outline"
+          icon="history"
           style={{width: 20}} 
           buttonColor='#0025bf' 
           mode="contained" 
-          onPress={() => navigation.navigate("Rescue")}>
+          onPress={() => navigation.navigate("History")}>
         </Button>
         <StatusBar style="auto" />
     </View>

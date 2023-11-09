@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import First from './first';
 import Rescue from './Rescue';
 import Begin from './Begin';
+import History from './History';
 
 
 const Stack = createNativeStackNavigator();
@@ -23,6 +24,11 @@ export default function Home() {
         <Stack.Screen 
           name="First" 
           component={First}
+          options={{header:() => null}}
+        />
+        <Stack.Screen 
+          name="History" 
+          component={History}
           options={{header:() => null}}
         />
       </Stack.Navigator>
