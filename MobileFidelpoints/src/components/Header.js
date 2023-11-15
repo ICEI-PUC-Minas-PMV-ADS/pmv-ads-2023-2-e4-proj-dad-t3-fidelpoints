@@ -15,7 +15,7 @@ function Header(props){
                     titleStyle={{color:"#fff"}} 
                     style={styles.bar} 
                 />
-                <Appbar.Action icon='logout' style={{backgroundColor:'#fff'}} onPress={() => navigation.navigate('Login')} />
+                <Appbar.Action icon='logout' style={{backgroundColor:'#fff'}} onPress={() => navigation.navigate('Begin')} />
             </Appbar.Header>
     )
 }

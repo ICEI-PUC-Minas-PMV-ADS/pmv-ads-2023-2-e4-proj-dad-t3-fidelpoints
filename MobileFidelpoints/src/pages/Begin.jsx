@@ -1,15 +1,17 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import { Button } from "react-native-paper";
 import { useNavigation } from "@react-navigation/core";
-//import { white } from "react-native-paper/lib/typescript/styles/themes/v2/colors";
+import firstImage from '../image/Banner.jpg';
 
 export default function Begin(){
     const navigation = useNavigation();
 
     return(
         <View style={styles.container}>
-            <Text style={styles.textTitle}> Seja bem Vindo ao FidelPoints!!</Text>
+            <Image
+                source={firstImage}
+                style={{width: 300, height: 300}}/>
             <Button 
                 icon="shopping-outline" 
                 style={{width: 130, marginTop: 30}} 
@@ -22,11 +24,9 @@ export default function Begin(){
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      borderTopEndRadius: 20,
-      borderTopStartRadius: 20,
-      marginTop: 35,
-      backgroundColor: '#0025bf',
+      flex: 1, 
+      marginTop: 0,
+      backgroundColor: '#004AAD',
       justifyContent: 'center',
       alignItems: 'center'
     },

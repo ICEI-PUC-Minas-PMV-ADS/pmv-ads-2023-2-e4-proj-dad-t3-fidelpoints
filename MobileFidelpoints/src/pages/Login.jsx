@@ -42,11 +42,11 @@ export default function Login(){
                     style={{marginTop: 10}}
                 />
                 <Button 
-                icon="shopping-outline" 
+                icon="login" 
                 style={{width: 130, marginTop: 30, alignSelf:'center'}} 
                 buttonColor='#0025bf' 
                 mode="contained" 
-                onPress={() => navigation.navigate('Rescue')}>Entrar </Button>
+                onPress={() => navigation.navigate('Rescue')}>Logar</Button>
             </View>
         </View>
     )
