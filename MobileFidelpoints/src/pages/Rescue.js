@@ -4,7 +4,6 @@ import { List, Divider, Button, IconButton } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import Header from '../components/Header';
 import { useNavigation } from '@react-navigation/core';
-import History from './History';
 
 const DATA = [
     {
@@ -81,14 +80,7 @@ export default function Rescue() {
         renderItem={renderItem}
         keyExtractor={item => item.ID}
       />
-        <Button 
-          icon="shopping" 
-          style={{width: 20}} 
-          buttonColor='#0025bf' 
-          mode="contained" 
-          onPress={() => navigation.navigate('First')}>
-        </Button>
-        <StatusBar style="auto" />
+        
         <StatusBar style="auto" />
     </View>
     

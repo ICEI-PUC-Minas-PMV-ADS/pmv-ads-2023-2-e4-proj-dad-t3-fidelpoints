@@ -1,6 +1,6 @@
 import React, {useState } from "react";
 import { View, StyleSheet, Text } from "react-native";
-import { TextInput, Button } from "react-native-paper";
+import { TextInput, Button, Appbar } from "react-native-paper";
 import Header from "../components/Header";
 import { useNavigation } from "@react-navigation/core";
 
@@ -12,7 +12,13 @@ export default function Login(){
 
     return(
         <View style={{flex: 1, backgroundColor:'#FFEBCD'}} >
-            <Header title = "FidelPoints"/>
+            <Appbar.Header >
+                <Appbar.Content 
+                    title='Fidelpoints' 
+                    titleStyle={{color:"#fff"}} 
+                    style={styles.bar} 
+                />
+            </Appbar.Header>
             <Text style={{marginBottom: 90, marginHorizontal:20, fontSize: 20, fontWeight:'bold'}}>
                 
                 Seja bem-vindo ao Fidelpoints seu sistema de fidelidade</Text>
@@ -55,5 +61,15 @@ const styles = StyleSheet.create({
       marginHorizontal: 30,
       borderRadius: 10
     },
+    bar:{
+        backgroundColor:"#0025bf", 
+        textDecorationColor:"#fff",
+        margin:10,
+        borderRadius: 5,
+        height: 30,
+        alignItems:'center',
+        justifyContent: 'center'
+
+    } 
 
   });
