@@ -15,7 +15,7 @@ export default function Begin(){
                 style={{width: 130, marginTop: 30}} 
                 buttonColor='#000000' 
                 mode="contained" 
-                onPress={() => navigation.navigate('Rescue')}>Entrar </Button>
+                onPress={() => navigation.navigate('Login')}>Entrar </Button>
         </View>
     )
 }
