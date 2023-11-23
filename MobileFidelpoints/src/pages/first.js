@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {View, Text, StyleSheet, FlatList } from 'react-native';
-import { List, Divider, Button } from 'react-native-paper';
+import { List, Divider, Button, IconButton } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import Header from '../components/Header';
-import { useNavigation } from '@react-navigation/core';
+import { useNavigation, useRoute } from '@react-navigation/core';
+import { useLocalSearchParams } from 'expo-router';
 
 const DATA = [
     {
@@ -32,24 +33,61 @@ const Item = ({title}) => (
 export default function First() {
 
     const navigation = useNavigation();
-    const renderItem = ({item}) => (<><List.Item title={item.produto} 
-    right={() => <List.Item title ={item.point}/> }
-     />
-     <Divider theme={{ colors: { primary: 'green' } }} /></>)
+//    const router = useRoute();
+    const {nameLoja, id} = useLocalSearchParams()
+//     async function callUser(){
+//       try{
+//         const {data} = api.get('/user', id);
+//       }catch(e){
+//         if(isAxiosResponse(e))
+//         toast(e.response?.data)
+//       }
+//     }
+
+// useEffect(()=>{
+//   callUser()
+// },[])
+
+    // const {nameLoja} = router.params;
+    const renderItem = ({item}) => (
+      <>
+      <List.Item
+          left={() => 
+            <List.Item 
+            title ={item.produto} 
+            style={{marginRight: 40}}/> 
+          }
+          title={item.point}
+          
+          right={() => <IconButton
+            icon="arrow-right-bold"
+            size={20}
+            onPress={() => navigation.navigate('History')}/>
+            
+          }
+      />
+        <Divider theme={{ colors: { primary: 'green' } }} />
+    </>)
   return (
 
     <View style={styles.container}>
-        <Header title = "Edglei Sports LTDA"/>
-        <List.Item 
-          titleStyle={{fontWeight: "bold"}} 
+        <Header title = {nameLoja}/>
+        <List.Item
+          left={() =><List.Item 
+            titleStyle={{fontWeight: 'bold'}}
+            title='Produtos'
+            style= {{  marginRight: 40}}
+          />}
+          titleStyle={{fontWeight: 'bold'}} 
           style={styles.listFirst} 
-          title='Produto' 
+          title='Pontos' 
           right={() => 
             <List.Item 
-              titleStyle={{fontWeight: "bold"}} 
-              title= 'Pontos'
+              titleStyle={{fontWeight: 'bold'}} 
+              title= 'Trocar'
             />
           }
+          
         />
         <Divider style={{height: 3, backgroundColor: "#0025bf"}} />
         <View style={{color: '#000', height:10 }}/>

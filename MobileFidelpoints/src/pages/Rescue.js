@@ -23,6 +23,7 @@ const DATA = [
     }
 ];
 
+
 const Item = ({title}) => (
     <View style={styles.item}>
       <Text style={styles.title}>{title}</Text>
@@ -32,6 +33,8 @@ const Item = ({title}) => (
 export default function Rescue() {
 
     const navigation = useNavigation();
+    
+    
     const renderItem = ({item}) => 
       (
         <>
@@ -45,7 +48,7 @@ export default function Rescue() {
               right={() => <IconButton
                 icon="cart"
                 size={20}
-                onPress={() => navigation.navigate('First')}/>
+                onPress={() => navigation.navigate('First', {nameLoja: item.loja, id: item.ID})}/>
               }
           />
             <Divider theme={{ colors: { primary: 'green' } }} />
