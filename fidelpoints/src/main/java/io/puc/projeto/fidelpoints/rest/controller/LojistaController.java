@@ -35,9 +35,9 @@ public class LojistaController {
     @PostMapping
     @ResponseStatus(CREATED)
     public Lojista salvar(@RequestBody @Valid Lojista lojista) {
-        if( lojista.getLogin() == null ||  lojista.getLogin() == ""){
-            throw new RegraNegocioException("O nome do cliente nao foi informado");
-        }
+//        if( lojista.getLogin() == null ||  lojista.getLogin() == ""){
+//            throw new RegraNegocioException("O nome do cliente nao foi informado");
+//        }
         String senhaCriptografada = passwordEncoder.encode(lojista.getSenha());
         lojista.setSenha(senhaCriptografada);
         return lojistaService.salvar(lojista);
