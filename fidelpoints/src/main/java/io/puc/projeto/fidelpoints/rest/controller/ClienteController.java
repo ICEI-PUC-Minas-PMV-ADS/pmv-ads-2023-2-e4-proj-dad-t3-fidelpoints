@@ -35,9 +35,9 @@ public class ClienteController {
     @PostMapping
     @ResponseStatus( HttpStatus.CREATED )
     public Cliente salvar ( @RequestBody @Valid Cliente cliente ){
-        if( cliente.getNome() == null ||  cliente.getNome() == ""){
-            throw new RegraNegocioException("O nome do cliente nao foi informado");
-        }
+//        if( cliente.getNome() == null ||  cliente.getNome() == ""){
+//            throw new RegraNegocioException("O nome do cliente nao foi informado");
+//        }
         return clientesRepository.save(cliente);
     }
 
