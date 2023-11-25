@@ -4,6 +4,7 @@ import { List, Divider, Button } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import Header from '../components/Header';
 import { useNavigation } from '@react-navigation/core';
+import { useLocalSearchParams } from 'expo-router';
 
 
 const DATA = [
@@ -11,16 +12,19 @@ const DATA = [
         ID: 1,
         loja: 'Lótus',
         produto: 'Mouse Wireless',
+        status: "Aguardando"
     },
     {
         ID: 2,
         loja: 'Bela Boutique',
         produto: 'Multivitamínico',
+        status: "Aguardando"
     },
     {
         ID:3,
         loja: 'Chique Demais',
-        produto: 'Sabonete líquido'
+        produto: 'Sabonete líquido',
+        status: "Aguardando"
     }
 ];
 
@@ -32,11 +36,20 @@ const Item = ({title}) => (
 
 export default function History() {
     const navigation = useNavigation();
+    const {produto, status} = useLocalSearchParams()
 
-    const renderItem = ({item}) => (<><List.Item title={item.loja} 
-    right={() => <List.Item title ={item.produto}/> }
+    const renderItem = ({item}) => (
+    <>
+      <List.Item 
+        title={produto} 
+        right={() => 
+        <List.Item 
+          title ={status}
+        />}
      />
-     <Divider theme={{ colors: { primary: 'green' } }} /></>)
+     <Divider theme={{ colors: { primary: 'green' } }} 
+    />
+  </>)
   return (
 
     <View style={styles.container}>
@@ -48,7 +61,7 @@ export default function History() {
           right={() => 
             <List.Item 
               titleStyle={{fontWeight: 'bold'}} 
-              title= 'Produto'
+              title= 'Status da troca'
             />
           }
         />
