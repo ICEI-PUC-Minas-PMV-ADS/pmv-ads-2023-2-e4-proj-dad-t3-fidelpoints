@@ -1,14 +1,23 @@
 import React, {useState } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, Alert } from "react-native";
 import { TextInput, Button, Appbar } from "react-native-paper";
 import Header from "../components/Header";
 import { useNavigation } from "@react-navigation/core";
 
 export default function Login(){
-
+    const data = {
+        id: 1,
+        user: "edglei",
+        password:"12345"
+    }
     const [user, setUser] = useState();
     const [pass, setPass] = useState();
     const navigation = useNavigation();
+    const testLogin = () => {
+        if(user === data.user && pass === data.password ){
+            navigation.navigate('Rescue', {userId: data.id, user: data.user })
+        }else Alert.alert("Atenção", "Usuário ou senha não confere!")
+    }
 
     return(
         <View style={{flex: 1, backgroundColor:'#FFEBCD'}} >
@@ -27,14 +36,12 @@ export default function Login(){
             <Text style ={{marginBottom: 10}}>Digite usuário e senha para logar!</Text>
                 <TextInput
                     label="Usuário"
-                    value={user}
                     backgroundColor= '#fff'
                     onChangeText={text => setUser(text)}
                     left ={<TextInput.Icon icon='account' />}
                 />
                 <TextInput
                     label="Senha"
-                    value={pass}
                     backgroundColor= '#fff'
                     secureTextEntry
                     onChangeText={text => setPass(text)}
@@ -46,7 +53,7 @@ export default function Login(){
                 style={{width: 130, marginTop: 30, alignSelf:'center'}} 
                 buttonColor='#0025bf' 
                 mode="contained" 
-                onPress={() => navigation.navigate('Rescue')}>Logar</Button>
+                onPress={testLogin}>Logar</Button>
             </View>
         </View>
     )
