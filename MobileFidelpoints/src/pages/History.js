@@ -8,7 +8,7 @@ import { useLocalSearchParams } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-let data = [];
+let data = [{ID: 1}];
 
 const Item = ({title}) => (
     <View style={styles.item}>
@@ -26,7 +26,7 @@ export default function History() {
         const jsonValue = JSON.stringify(data);
         await AsyncStorage.setItem('productList', jsonValue);
         console.log(jsonValue)
-        Alert.alert("Test", `Escreveu!`)
+      //  Alert.alert("Test", `Escreveu!`)
       } catch (e) {
         Alert.alert("Test", `Não escreveu!`)
       }
@@ -36,33 +36,30 @@ export default function History() {
         const jsonValue = await AsyncStorage.getItem('productList');
         data = JSON.parse(jsonValue);
         console.log(jsonValue);
-        Alert.alert("TesteRead", "Leu")
+      //  Alert.alert("TesteRead", "Leu")
       } catch (e) {
         Alert.alert("TesteRead", "Não leu")
       }
     };
-    const [id, setId] = useState(1)
-    useEffect(()=>{
+  //  const [id, setId] = useState()
+  /*  useEffect(()=>{
       
       getData();
-      data.ID = id;
       let dataStore = {produto: produto, status: status };
-      console.log(dataStore)
-      
       data.push(dataStore);
       storeData(data);
       console.log(data)
     //  
       
        },[])
-
+*/
     const renderItem = ({item}) => (
     <>
       <List.Item 
-        title={item.produto} 
+        title={produto} 
         right={() => 
         <List.Item 
-          title ={item.status}
+          title ={status}
         />}
      />
      <Divider theme={{ colors: { primary: 'green' } }} 
