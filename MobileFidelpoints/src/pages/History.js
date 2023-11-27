@@ -8,7 +8,8 @@ import { useLocalSearchParams } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-let data = [{ID: 1}];
+let data = [];
+let zera =[];
 
 const Item = ({title}) => (
     <View style={styles.item}>
@@ -21,45 +22,47 @@ export default function History() {
     const {produto, status} = useLocalSearchParams();
 
 
-    async function storeData(data) {
+    function storeData(data) {
       try {
         const jsonValue = JSON.stringify(data);
-        await AsyncStorage.setItem('productList', jsonValue);
-        console.log(jsonValue)
+        AsyncStorage.setItem('productList', jsonValue);
+      //  console.log(jsonValue)
       //  Alert.alert("Test", `Escreveu!`)
       } catch (e) {
         Alert.alert("Test", `Não escreveu!`)
       }
     };
-    async function getData() {
+    function getData() {
       try {
-        const jsonValue = await AsyncStorage.getItem('productList');
+        const jsonValue = AsyncStorage.getItem('productList');
         data = JSON.parse(jsonValue);
-        console.log(jsonValue);
+        let id =Math.floor(Math.random()*100);
+        let dataStore = {id: id , produto: produto, status: status };
+        data.push(dataStore);
+        storeData(data);
+      //  console.log(jsonValue);
       //  Alert.alert("TesteRead", "Leu")
       } catch (e) {
         Alert.alert("TesteRead", "Não leu")
       }
     };
   //  const [id, setId] = useState()
-  /*  useEffect(()=>{
+    useEffect(()=>{
       
       getData();
-      let dataStore = {produto: produto, status: status };
-      data.push(dataStore);
-      storeData(data);
-      console.log(data)
+      
+    //  console.log(data)
     //  
       
        },[])
-*/
+
     const renderItem = ({item}) => (
     <>
       <List.Item 
-        title={produto} 
+        title={item.produto} 
         right={() => 
         <List.Item 
-          title ={status}
+          title ={item.status}
         />}
      />
      <Divider theme={{ colors: { primary: 'green' } }} 
@@ -85,7 +88,7 @@ export default function History() {
         <FlatList
         data={data}
         renderItem={renderItem}
-        keyExtractor={item => item.ID}
+        keyExtractor={item => item.id}
       />
 
         <Button 
@@ -93,7 +96,11 @@ export default function History() {
           style={{width: 20}} 
           buttonColor='#0025bf' 
           mode="contained" 
-          onPress={() => navigation.navigate('Rescue')}>
+          onPress={() =>{
+            storeData(zera);
+            navigation.navigate('Rescue');
+            console.log(data);
+          }}>
         </Button>
         <StatusBar style="auto" />
     </View>
