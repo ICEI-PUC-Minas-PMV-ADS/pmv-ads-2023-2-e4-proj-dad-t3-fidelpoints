@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
 @Data
@@ -23,6 +24,7 @@ public class Lojista {
 
     @NotEmpty(message = "{campo.login.obrigatorio}")
     @Column
+    @Email
     private String login;
 
     @NotEmpty(message = "{campo.senha.obrigatorio}")

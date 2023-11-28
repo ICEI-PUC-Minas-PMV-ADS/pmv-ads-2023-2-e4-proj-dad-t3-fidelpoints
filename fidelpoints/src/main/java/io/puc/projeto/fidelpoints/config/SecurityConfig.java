@@ -2,6 +2,7 @@ package io.puc.projeto.fidelpoints.config;
 
 import io.puc.projeto.fidelpoints.jwt.JwtAuthFilter;
 import io.puc.projeto.fidelpoints.jwt.JwtService;
+import io.puc.projeto.fidelpoints.service.impl.ClienteServiceImpl;
 import io.puc.projeto.fidelpoints.service.impl.LojistaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -23,6 +24,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private LojistaServiceImpl lojistaService;
 
+    private ClienteServiceImpl clienteService;
+
     @Autowired
     private JwtService jwtService;
 
@@ -33,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public OncePerRequestFilter jwtfilter() {
-        return new JwtAuthFilter(jwtService, lojistaService);
+        return new JwtAuthFilter(jwtService, lojistaService, clienteService);
     }
     @Override
     protected void configure( AuthenticationManagerBuilder auth ) throws Exception {
@@ -49,15 +52,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                     .antMatchers("/api/clientes/**")
-                        .hasAnyRole("USER", "ADMIN")
+                        .hasAnyRole("CLIENTE", "LOJISTA")
 
                     .antMatchers("/api/pedidos/**")
-                        .hasAnyRole("USER", "ADMIN")
+                        .hasAnyRole("CLIENTE", "LOJISTA")
 
                     .antMatchers("/api/produtos/**")
-                        .hasRole("ADMIN")
+                        .hasAnyRole("CLIENTE","LOJISTA")
 
-                    .antMatchers(HttpMethod.POST, "/api/usuarios/**")
+                    .antMatchers(HttpMethod.POST, "/api/usuarios/**", "/api/clientes/auth", "/api/lojista/auth")
                         .permitAll()
                     .anyRequest().authenticated()
                 .and()

@@ -8,7 +8,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 import java.util.Set;
 
 @Data
@@ -30,7 +32,18 @@ public class Cliente {
 
     @Column(name = "celular", length = 11)
     @NotEmpty( message = "{campo.celular.obrigatorio}")
+    @Pattern(regexp = "\\d{10,11}")
     private String celular;
+
+
+    @Column(name = "Email")
+    @NotEmpty(message = "{campo.email.obrigatório}")
+    @Email
+    private String email;
+
+    @NotEmpty(message = "{campo.senha.obrigatorio}")
+    @Column(name = "senha")
+    private String senha;
 
 
     @JsonIgnore
@@ -41,6 +54,9 @@ public class Cliente {
         this.id = id;
         this.nome = nome;
     }
+
+    @Column
+    private boolean User;
 
 
 }

@@ -1,5 +1,6 @@
 package io.puc.projeto.fidelpoints.jwt;
 
+import io.puc.projeto.fidelpoints.service.impl.ClienteServiceImpl;
 import io.puc.projeto.fidelpoints.service.impl.LojistaServiceImpl;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -18,9 +19,11 @@ public class JwtAuthFilter extends OncePerRequestFilter {
     private JwtService jwtService;
     private LojistaServiceImpl lojistaService;
 
-    public JwtAuthFilter(JwtService jwtService, LojistaServiceImpl usuarioService) {
+    private ClienteServiceImpl clienteService;
+    public JwtAuthFilter(JwtService jwtService, LojistaServiceImpl usuarioService, ClienteServiceImpl clienteService) {
         this.jwtService = jwtService;
         this.lojistaService = usuarioService;
+        this.clienteService = clienteService;
     }
 
     @Override
@@ -28,15 +31,18 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                                     HttpServletResponse httpServletResponse,
                                     FilterChain filterChain ) throws ServletException, IOException {
 
+
         String authorization = httpServletRequest.getHeader("Authorization");
 
         if( authorization!= null && authorization.startsWith("Bearer") ){
             String token = authorization.split(" ")[1];
             boolean isValid = jwtService.tokenValido(token);
 
+            //obter role que está na claims
+
             if(isValid){
-                String loginLojista = jwtService.obterLoginUsuario(token);
-                UserDetails lojista = lojistaService.loadUserByUsername(loginLojista);
+                String username = jwtService.obterLoginUsuario(token);
+                UserDetails lojista = lojistaService.loadUserByUsername(username);
                 UsernamePasswordAuthenticationToken user = new
                         UsernamePasswordAuthenticationToken(lojista, null,
                         lojista.getAuthorities());

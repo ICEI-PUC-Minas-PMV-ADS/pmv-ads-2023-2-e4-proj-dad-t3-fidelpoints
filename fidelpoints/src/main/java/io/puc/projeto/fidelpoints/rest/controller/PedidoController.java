@@ -10,6 +10,7 @@ import io.puc.projeto.fidelpoints.rest.dto.PedidoDTO;
 import io.puc.projeto.fidelpoints.service.PedidoService;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -27,6 +28,7 @@ import static org.springframework.http.HttpStatus.*;
 @RequestMapping("api/pedidos")
 public class PedidoController {
 
+    @Autowired
     private PedidoService pedidoService;
 
 

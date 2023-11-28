@@ -6,10 +6,13 @@ import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.puc.projeto.fidelpoints.FidelpointsApplication;
+import io.puc.projeto.fidelpoints.domain.entity.Cliente;
 import io.puc.projeto.fidelpoints.domain.entity.Lojista;
+import io.puc.projeto.fidelpoints.domain.enums.RoleEnum;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -26,19 +29,40 @@ public class JwtService {
     @Value("${security.jwt.chave-assinatura}")
     private String chaveAssinatura;
 
-    public String gerarToken( Lojista lojista ){
+    public String gerarTokenCliente(Cliente cliente){
 
+        Claims claims = Jwts.claims().setSubject(cliente.getEmail());
+        claims.put("idCliente",cliente.getId());
+        claims.put("firstName",cliente.getNome());
+        claims.put("email",cliente.getEmail() );
+        claims.put("role", RoleEnum.CLIENTE);
+
+        return gerarJwt(claims);
+    }
+
+    public String gerarTokenLojista(Lojista lojista){
+
+        Claims claims = Jwts.claims().setSubject(lojista.getLogin());
+        claims.put("idCliente",lojista.getId());
+        //claims.put("name",cliente.getNome());
+        claims.put("email",lojista.getLogin() );
+        claims.put("role", RoleEnum.LOJISTA);
+
+        return gerarJwt(claims);
+    }
+
+    private String gerarJwt(Claims claims) {
         long expString = Long.valueOf(expiracao);
         LocalDateTime dataHoraExpiracao = LocalDateTime.now().plusMinutes(expString);
         Instant instant = dataHoraExpiracao.atZone(ZoneId.systemDefault()).toInstant();
         Date data = Date .from(instant);
 
-
         return Jwts
                 .builder()
-                .setSubject(lojista.getLogin())
+                .setClaims(claims)
+                .setSubject(claims.getSubject())
                 .setExpiration(data)
-                .signWith(SignatureAlgorithm.HS512, chaveAssinatura )
+                .signWith(SignatureAlgorithm.HS512, chaveAssinatura)
                 .compact();
     }
 
@@ -73,7 +97,7 @@ public class JwtService {
         ConfigurableApplicationContext contexto = SpringApplication.run(FidelpointsApplication.class);
         JwtService service = contexto.getBean(JwtService.class);
         Lojista lojista = Lojista.builder().login("fulano").build();
-        String token = service.gerarToken(lojista);
+        String token = service.gerarTokenLojista(lojista);
         System.out.println(token);
 
         boolean isTokenValido = service.tokenValido(token);

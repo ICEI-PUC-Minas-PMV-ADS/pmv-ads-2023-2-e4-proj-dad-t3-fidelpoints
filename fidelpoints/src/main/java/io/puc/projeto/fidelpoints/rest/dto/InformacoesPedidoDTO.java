@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Data
@@ -14,10 +15,16 @@ import java.util.List;
 public class InformacoesPedidoDTO {
 
     private Integer codigo;
+
+    @Pattern(regexp = "\\d{10,11}")
     private String celular;
+
     private String nomeCliente;
+
     private Integer total;
+
     private String dataPedido;
+
     private String status;
 
 
