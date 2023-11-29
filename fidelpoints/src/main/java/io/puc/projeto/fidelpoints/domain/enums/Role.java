@@ -2,7 +2,7 @@ package io.puc.projeto.fidelpoints.domain.enums;
 
 public enum Role {
 
-    CLIENTE,
-    LOJISTA;
+    ROLE_CLIENTE,
+    ROLE_LOJISTA;
 
 }

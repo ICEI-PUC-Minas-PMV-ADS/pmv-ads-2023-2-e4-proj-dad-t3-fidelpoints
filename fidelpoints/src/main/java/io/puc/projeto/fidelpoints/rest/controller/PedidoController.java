@@ -12,6 +12,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -38,6 +39,7 @@ public class PedidoController {
 
     @GetMapping("/teste")
     @ResponseStatus( HttpStatus.OK )
+    @PreAuthorize("hasAnyRole('CLIENTE','LOJISTA')")
     public String getClienteById() {
 
         return new String("Sucesso");

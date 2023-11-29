@@ -1,7 +1,6 @@
-package io.puc.projeto.fidelpoints.config;
+package io.puc.projeto.fidelpoints.auth.config;
 
-import io.puc.projeto.fidelpoints.jwt.JwtAuthFilter;
-import io.puc.projeto.fidelpoints.jwt.JwtService;
+import io.puc.projeto.fidelpoints.auth.service.UserAutenticationServiceImpl;
 import io.puc.projeto.fidelpoints.service.impl.ClienteServiceImpl;
 import io.puc.projeto.fidelpoints.service.impl.LojistaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,12 +10,14 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
@@ -24,6 +25,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 @Configuration
 @EnableWebSecurity
+@EnableMethodSecurity //Habilita o @PreAuthorize, caso nao estiver com essa configuração precisará adicionar a configuracao ao SecurityFilterChain
 public class SecurityConfig {
 
     @Autowired
@@ -32,7 +34,7 @@ public class SecurityConfig {
     private ClienteServiceImpl clienteService;
 
     @Autowired
-    private io.puc.projeto.fidelpoints.service.impl.UserAutenticationServiceImpl userAutenticationServiceImpl;
+    private UserAutenticationServiceImpl userAutenticationServiceImpl;
 
     @Autowired
     private JwtService jwtService;
@@ -41,7 +43,6 @@ public class SecurityConfig {
     public OncePerRequestFilter jwtfilter() {
         return new JwtAuthFilter(jwtService, lojistaService, userAutenticationServiceImpl, clienteService);
     }
-
     @Bean
     public AuthenticationManager authenticationManager(HttpSecurity http, BCryptPasswordEncoder bCryptPasswordEncoder, UserDetailsService userDetailService)
             throws Exception {
@@ -62,23 +63,19 @@ public class SecurityConfig {
                         .permitAll()
 
                         .requestMatchers("/api/clientes/teste")
-                        .hasAnyAuthority("CLIENTE")
+                        .hasRole("CLIENTE")
 
                         .requestMatchers("/api/lojistas/teste")
-                        .hasAnyAuthority("LOJISTA")
+                        .hasRole("LOJISTA")
 
                         .requestMatchers("/api/pedidos/**")
-                        .hasAnyAuthority("CLIENTE", "LOJISTA")
+                        .hasAnyRole("CLIENTE", "LOJISTA")
 
                        // .requestMatchers("/api/produtos/**")
                         //.hasAnyRole("CLIENTE", "LOJISTA")
 
                         .anyRequest().denyAll()
                 )
-                // .and()
-                // .sessionManagement()
-                // .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                //  .and()
 
                 .addFilterBefore(jwtfilter(), UsernamePasswordAuthenticationFilter.class);
 

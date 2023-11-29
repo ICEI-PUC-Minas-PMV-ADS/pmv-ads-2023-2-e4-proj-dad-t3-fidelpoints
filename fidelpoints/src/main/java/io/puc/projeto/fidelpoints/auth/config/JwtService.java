@@ -1,4 +1,4 @@
-package io.puc.projeto.fidelpoints.jwt;
+package io.puc.projeto.fidelpoints.auth.config;
 
 
 import io.jsonwebtoken.Claims;
@@ -34,7 +34,7 @@ public class JwtService {
         claims.put("idCliente",cliente.getId());
         claims.put("firstName",cliente.getNome());
         claims.put("email",cliente.getEmail() );
-        claims.put("role", Role.CLIENTE);
+        claims.put("role", Role.ROLE_CLIENTE);
 
         return gerarJwt(claims);
     }
@@ -45,7 +45,7 @@ public class JwtService {
         claims.put("idCliente",lojista.getId());
         //claims.put("name",cliente.getNome());
         claims.put("email",lojista.getLogin() );
-        claims.put("role", Role.LOJISTA);
+        claims.put("role", Role.ROLE_LOJISTA);
 
         return gerarJwt(claims);
     }

@@ -2,7 +2,7 @@ package io.puc.projeto.fidelpoints.rest.controller;
 
 
 import io.puc.projeto.fidelpoints.domain.entity.Cliente;
-import io.puc.projeto.fidelpoints.service.AutenticationService;
+import io.puc.projeto.fidelpoints.auth.service.AutenticationService;
 import io.puc.projeto.fidelpoints.service.ClienteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class ClienteController {
 
     @GetMapping("/teste")
     @ResponseStatus( HttpStatus.OK )
-    //@PreAuthorize("hasAuthority('CLIENTE')")
+    @PreAuthorize("hasAnyRole('CLIENTE')")
     public String getClienteById() {
 
         return new String("Sucesso");
@@ -41,6 +41,7 @@ public class ClienteController {
 
     @PostMapping
     @ResponseStatus( HttpStatus.CREATED )
+    @PreAuthorize("permitAll()")
     public Cliente salvar ( @RequestBody @Valid Cliente cliente ){
 
         Cliente clienteReturn = clienteService.salvarCliente(cliente);

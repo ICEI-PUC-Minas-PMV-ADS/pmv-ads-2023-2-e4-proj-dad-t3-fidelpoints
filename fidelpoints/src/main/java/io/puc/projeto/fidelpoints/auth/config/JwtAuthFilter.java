@@ -1,14 +1,13 @@
-package io.puc.projeto.fidelpoints.jwt;
+package io.puc.projeto.fidelpoints.auth.config;
 
+import io.puc.projeto.fidelpoints.auth.service.UserAutenticationService;
 import io.puc.projeto.fidelpoints.domain.entity.Cliente;
 import io.puc.projeto.fidelpoints.domain.entity.Lojista;
 import io.puc.projeto.fidelpoints.domain.enums.Role;
-import io.puc.projeto.fidelpoints.service.UserAutenticationService;
 import io.puc.projeto.fidelpoints.service.impl.ClienteServiceImpl;
 import io.puc.projeto.fidelpoints.service.impl.LojistaServiceImpl;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -55,7 +54,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
                 UsernamePasswordAuthenticationToken user;
 
-                if(role.equalsIgnoreCase(Role.CLIENTE.name())){
+                if(role.equalsIgnoreCase(Role.ROLE_CLIENTE.name())){
                     Cliente cliente = userAutenticationService.loadCliente(username);
 
                     user = new
