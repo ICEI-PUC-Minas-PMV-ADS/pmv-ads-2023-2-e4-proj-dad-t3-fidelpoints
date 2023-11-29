@@ -11,11 +11,12 @@ import io.puc.projeto.fidelpoints.service.PedidoService;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.List;
@@ -31,9 +32,15 @@ public class PedidoController {
     @Autowired
     private PedidoService pedidoService;
 
-
     public PedidoController(PedidoService pedidoService) {
         this.pedidoService = pedidoService;
+    }
+
+    @GetMapping("/teste")
+    @ResponseStatus( HttpStatus.OK )
+    public String getClienteById() {
+
+        return new String("Sucesso");
     }
 
     @PostMapping

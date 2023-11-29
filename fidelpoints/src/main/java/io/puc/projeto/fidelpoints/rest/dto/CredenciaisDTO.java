@@ -1,10 +1,10 @@
 package io.puc.projeto.fidelpoints.rest.dto;
 
-import io.puc.projeto.fidelpoints.domain.enums.RoleEnum;
+import io.puc.projeto.fidelpoints.domain.enums.Role;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.Email;
+import jakarta.validation.constraints.Email;
 
 @Data
 @NoArgsConstructor
@@ -15,6 +15,6 @@ public class CredenciaisDTO {
 
     private String senha;
 
-    private RoleEnum roleEnum;
+    private Role roleEnum;
 
 }

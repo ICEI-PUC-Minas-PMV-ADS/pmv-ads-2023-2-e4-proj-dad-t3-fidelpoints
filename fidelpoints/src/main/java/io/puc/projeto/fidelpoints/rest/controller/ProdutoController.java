@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.util.List;
 
 import static org.springframework.http.HttpStatus.CREATED;
@@ -23,6 +23,13 @@ public class ProdutoController {
 
     public ProdutoController( ProdutosRepository produtosRepository ){
         this.produtosRepository = produtosRepository;
+    }
+
+    @GetMapping("/teste")
+    @ResponseStatus( HttpStatus.OK )
+    public String getClienteById() {
+
+        return new String("Sucesso");
     }
 
     @GetMapping("{id}")

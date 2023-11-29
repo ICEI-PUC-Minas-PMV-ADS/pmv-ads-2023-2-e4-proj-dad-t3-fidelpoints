@@ -1,8 +1,10 @@
 package io.puc.projeto.fidelpoints.service.impl;
 
+import com.google.common.collect.Sets;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.puc.projeto.fidelpoints.domain.entity.Cliente;
+import io.puc.projeto.fidelpoints.domain.enums.Role;
 import io.puc.projeto.fidelpoints.domain.repository.ClientesRepository;
 import io.puc.projeto.fidelpoints.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 
 
@@ -34,6 +37,7 @@ public class ClienteServiceImpl implements ClienteService {
 
         String senhaCriptografada = passwordEncoder.encode(cliente.getSenha());
         cliente.setSenha(senhaCriptografada);
+        cliente.setRole(Role.CLIENTE);
 
         return clientesRepository.save(cliente);
     }

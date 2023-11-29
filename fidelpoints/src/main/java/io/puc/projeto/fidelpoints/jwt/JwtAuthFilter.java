@@ -1,5 +1,9 @@
 package io.puc.projeto.fidelpoints.jwt;
 
+import io.puc.projeto.fidelpoints.domain.entity.Cliente;
+import io.puc.projeto.fidelpoints.domain.entity.Lojista;
+import io.puc.projeto.fidelpoints.domain.enums.Role;
+import io.puc.projeto.fidelpoints.service.UserAutenticationService;
 import io.puc.projeto.fidelpoints.service.impl.ClienteServiceImpl;
 import io.puc.projeto.fidelpoints.service.impl.LojistaServiceImpl;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -8,10 +12,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class JwtAuthFilter extends OncePerRequestFilter {
@@ -19,10 +23,13 @@ public class JwtAuthFilter extends OncePerRequestFilter {
     private JwtService jwtService;
     private LojistaServiceImpl lojistaService;
 
+    private UserAutenticationService userAutenticationService;
+
     private ClienteServiceImpl clienteService;
-    public JwtAuthFilter(JwtService jwtService, LojistaServiceImpl usuarioService, ClienteServiceImpl clienteService) {
+    public JwtAuthFilter(JwtService jwtService, LojistaServiceImpl usuarioService, UserAutenticationService userAutenticationService, ClienteServiceImpl clienteService) {
         this.jwtService = jwtService;
         this.lojistaService = usuarioService;
+        this.userAutenticationService = userAutenticationService;
         this.clienteService = clienteService;
     }
 
@@ -42,10 +49,26 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
             if(isValid){
                 String username = jwtService.obterLoginUsuario(token);
-                UserDetails lojista = lojistaService.loadUserByUsername(username);
-                UsernamePasswordAuthenticationToken user = new
-                        UsernamePasswordAuthenticationToken(lojista, null,
-                        lojista.getAuthorities());
+
+
+                String role = jwtService.getClaimByKey(token, "role");
+
+                UsernamePasswordAuthenticationToken user;
+
+                if(role.equalsIgnoreCase(Role.CLIENTE.name())){
+                    Cliente cliente = userAutenticationService.loadCliente(username);
+
+                    user = new
+                            UsernamePasswordAuthenticationToken(cliente, cliente.getSenha(),
+                            cliente.getAuthorities());
+                } else{
+                    Lojista lojista = userAutenticationService.loadLojista(username);
+
+                    user = new
+                            UsernamePasswordAuthenticationToken(lojista, lojista.getSenha(),
+                            lojista.getAuthorities());
+                }
+
                 user.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));
                 SecurityContextHolder.getContext().setAuthentication(user);
 

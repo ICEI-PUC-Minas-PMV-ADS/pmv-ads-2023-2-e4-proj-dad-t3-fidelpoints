@@ -2,8 +2,8 @@ package io.puc.projeto.fidelpoints.validation.constraintvalidation;
 
 import io.puc.projeto.fidelpoints.validation.NotEmptyList;
 
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 import java.util.List;
 
 public class NotEmptyListValidator implements ConstraintValidator<NotEmptyList, List> {

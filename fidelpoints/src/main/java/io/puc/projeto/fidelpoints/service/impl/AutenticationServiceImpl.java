@@ -2,7 +2,7 @@ package io.puc.projeto.fidelpoints.service.impl;
 
 import io.puc.projeto.fidelpoints.domain.entity.Cliente;
 import io.puc.projeto.fidelpoints.domain.entity.Lojista;
-import io.puc.projeto.fidelpoints.domain.enums.RoleEnum;
+import io.puc.projeto.fidelpoints.domain.enums.Role;
 import io.puc.projeto.fidelpoints.exception.SenhaInvalidaException;
 import io.puc.projeto.fidelpoints.jwt.JwtService;
 import io.puc.projeto.fidelpoints.rest.dto.CredenciaisDTO;
@@ -34,10 +34,10 @@ public class AutenticationServiceImpl implements AutenticationService {
 
             String token;
 
-            if(credenciais.getRoleEnum() == RoleEnum.CLIENTE){
+            if(credenciais.getRoleEnum() == Role.CLIENTE){
                 token = gerarTokenCliente(credenciais);
             }else{
-                token = gerarTokenCliente(credenciais);
+                token = gerarTokenLojista(credenciais);
             }
 
             return new TokenDTO(credenciais.getLogin(), token);
@@ -49,12 +49,12 @@ public class AutenticationServiceImpl implements AutenticationService {
     }
 
     private String gerarTokenCliente(CredenciaisDTO credenciais) {
-        Cliente cliente = userAutenticationService.loadCliente(credenciais);
+        Cliente cliente = userAutenticationService.loadCliente(credenciais.getLogin());
         return jwtService.gerarTokenCliente(cliente);
     }
 
     private String gerarTokenLojista(CredenciaisDTO credenciais) {
-        Lojista lojista = userAutenticationService.loadLojista(credenciais);
+        Lojista lojista = userAutenticationService.loadLojista(credenciais.getLogin());
         return jwtService.gerarTokenLojista(lojista);
     }
 

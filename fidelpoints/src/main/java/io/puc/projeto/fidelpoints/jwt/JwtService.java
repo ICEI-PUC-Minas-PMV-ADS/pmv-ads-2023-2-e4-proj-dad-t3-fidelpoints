@@ -8,11 +8,10 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.puc.projeto.fidelpoints.FidelpointsApplication;
 import io.puc.projeto.fidelpoints.domain.entity.Cliente;
 import io.puc.projeto.fidelpoints.domain.entity.Lojista;
-import io.puc.projeto.fidelpoints.domain.enums.RoleEnum;
+import io.puc.projeto.fidelpoints.domain.enums.Role;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -35,7 +34,7 @@ public class JwtService {
         claims.put("idCliente",cliente.getId());
         claims.put("firstName",cliente.getNome());
         claims.put("email",cliente.getEmail() );
-        claims.put("role", RoleEnum.CLIENTE);
+        claims.put("role", Role.CLIENTE);
 
         return gerarJwt(claims);
     }
@@ -46,7 +45,7 @@ public class JwtService {
         claims.put("idCliente",lojista.getId());
         //claims.put("name",cliente.getNome());
         claims.put("email",lojista.getLogin() );
-        claims.put("role", RoleEnum.LOJISTA);
+        claims.put("role", Role.LOJISTA);
 
         return gerarJwt(claims);
     }
@@ -66,7 +65,7 @@ public class JwtService {
                 .compact();
     }
 
-    public Claims obterClaims (String token) throws ExpiredJwtException {
+    public Claims getClaims(String token) throws ExpiredJwtException {
         return Jwts
                 .parser()
                 .setSigningKey(chaveAssinatura)
@@ -77,7 +76,7 @@ public class JwtService {
     public boolean tokenValido( String token ) {
         try {
 
-            Claims claims = obterClaims(token);
+            Claims claims = getClaims(token);
             Date dataExpiracao = claims.getExpiration();
             LocalDateTime data = dataExpiracao.toInstant()
                     .atZone(ZoneId.systemDefault()).toLocalDateTime();
@@ -89,7 +88,11 @@ public class JwtService {
     }
 
    public String obterLoginUsuario (String token) throws ExpiredJwtException{
-        return (String) obterClaims(token).getSubject();
+        return (String) getClaims(token).getSubject();
+    }
+
+    public String getClaimByKey (String token, String key) throws ExpiredJwtException{
+        return (String) getClaims(token).get(key);
     }
 
 

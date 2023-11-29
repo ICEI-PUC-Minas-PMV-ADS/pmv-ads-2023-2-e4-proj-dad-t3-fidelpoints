@@ -2,16 +2,16 @@ package io.puc.projeto.fidelpoints.rest.controller;
 
 
 import io.puc.projeto.fidelpoints.domain.entity.Cliente;
-import io.puc.projeto.fidelpoints.domain.enums.RoleEnum;
-import io.puc.projeto.fidelpoints.rest.dto.CredenciaisDTO;
-import io.puc.projeto.fidelpoints.rest.dto.TokenDTO;
+import io.puc.projeto.fidelpoints.service.AutenticationService;
 import io.puc.projeto.fidelpoints.service.ClienteService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import javax.validation.constraints.Email;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
 import java.util.List;
 
 
@@ -19,11 +19,19 @@ import java.util.List;
 @RequestMapping("/api/clientes")
 @RequiredArgsConstructor
 public class ClienteController {
-
+    @Autowired
     private ClienteService clienteService;
 
+    @Autowired
+    private AutenticationService autenticationService;
 
+    @GetMapping("/teste")
+    @ResponseStatus( HttpStatus.OK )
+    //@PreAuthorize("hasAuthority('CLIENTE')")
+    public String getClienteById() {
 
+        return new String("Sucesso");
+    }
 
     @GetMapping("{id}")
     public Cliente getClienteById(@PathVariable Integer id ) {
@@ -35,7 +43,8 @@ public class ClienteController {
     @ResponseStatus( HttpStatus.CREATED )
     public Cliente salvar ( @RequestBody @Valid Cliente cliente ){
 
-        return clienteService.salvarCliente(cliente);
+        Cliente clienteReturn = clienteService.salvarCliente(cliente);
+        return clienteReturn;
     }
 
     @DeleteMapping("{id}")

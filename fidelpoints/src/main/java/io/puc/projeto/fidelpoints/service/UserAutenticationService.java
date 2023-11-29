@@ -6,7 +6,7 @@ import io.puc.projeto.fidelpoints.rest.dto.CredenciaisDTO;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public interface UserAutenticationService {
-    Cliente loadCliente(CredenciaisDTO credenciais);
+    Cliente loadCliente(String username);
 
-    Lojista loadLojista(CredenciaisDTO credenciais);
+    Lojista loadLojista(String username);
 }
