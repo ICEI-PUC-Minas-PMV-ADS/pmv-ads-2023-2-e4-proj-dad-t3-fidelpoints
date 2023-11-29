@@ -1,7 +1,6 @@
 package io.puc.projeto.fidelpoints.domain.entity;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.puc.projeto.fidelpoints.domain.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,8 +15,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.Arrays;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -65,9 +64,8 @@ public class Cliente implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role.name()));
+        return Arrays.asList(new SimpleGrantedAuthority(role.name()));
     }
-
     @Override
     public String getPassword() {
         return this.senha;
