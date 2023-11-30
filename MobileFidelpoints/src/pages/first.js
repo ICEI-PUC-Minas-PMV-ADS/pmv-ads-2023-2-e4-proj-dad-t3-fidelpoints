@@ -11,16 +11,19 @@ const DATA = [
         ID: 1,
         produto: 'Copo Cooler',
         point: 200,
+        status: "Aguardando"
     },
     {
         ID: 2,
         produto: 'Racket',
         point: 400,
+        status: "Aguardando"
     },
     {
         ID:3,
         produto: 'Pipoqueira',
-        point: 600
+        point: 600,
+        status: "Aguardando"
     }
 ];
 
@@ -62,7 +65,11 @@ export default function First() {
           right={() => <IconButton
             icon="arrow-right-bold"
             size={20}
-            onPress={() => navigation.navigate('History')}/>
+            onPress={() => navigation.navigate('History', 
+              {
+                produto: item.produto, 
+                status: item.status
+              })}/>
             
           }
       />
