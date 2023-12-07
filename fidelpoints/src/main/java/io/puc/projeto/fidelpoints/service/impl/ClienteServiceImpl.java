@@ -1,8 +1,9 @@
 package io.puc.projeto.fidelpoints.service.impl;
 
-import io.puc.projeto.fidelpoints.domain.entity.Cliente;
-import io.puc.projeto.fidelpoints.domain.enums.Role;
-import io.puc.projeto.fidelpoints.domain.repository.ClientesRepository;
+import io.puc.projeto.fidelpoints.entity.Cliente;
+import io.puc.projeto.fidelpoints.enums.Role;
+import io.puc.projeto.fidelpoints.exception.erros.ClienteNotFoundException;
+import io.puc.projeto.fidelpoints.repository.ClientesRepository;
 import io.puc.projeto.fidelpoints.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -42,8 +43,7 @@ public class ClienteServiceImpl implements ClienteService {
                     clientesRepository.delete( cliente );
                     return cliente;
                 })
-                .orElseThrow( () -> new ResponseStatusException(
-                        HttpStatus.NOT_FOUND,"Cliente não encontrado" ));
+                .orElseThrow( () -> new ClienteNotFoundException());
     }
 
     @Override
@@ -54,8 +54,7 @@ public class ClienteServiceImpl implements ClienteService {
                     cliente.setId( clienteExistente.getId() );
                     clientesRepository.save(cliente);
                     return clienteExistente;
-                }).orElseThrow( () -> new ResponseStatusException(
-                        HttpStatus.NOT_FOUND,"Cliente não encontrado"));
+                }).orElseThrow( () -> new ClienteNotFoundException());
     }
 
 
@@ -63,8 +62,7 @@ public class ClienteServiceImpl implements ClienteService {
     public Cliente getCliente(Integer id) {
         return clientesRepository
                 .findById(id)
-                .orElseThrow(() -> new ResponseStatusException(
-                        HttpStatus.NOT_FOUND, "Cliente não encontrado"));
+                .orElseThrow(() -> new ClienteNotFoundException());
     }
 
 
@@ -74,7 +72,7 @@ public class ClienteServiceImpl implements ClienteService {
 
         Cliente cliente = clientesRepository
                 .findByEmail(email)
-                .orElseThrow(() -> new UsernameNotFoundException(" Cliente não encontrado. "));
+                .orElseThrow(() -> new ClienteNotFoundException());
 
         return Collections.singletonList(cliente);
 

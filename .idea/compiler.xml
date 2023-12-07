@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="fidelpoints" target="1.8" />
+      <module name="fidelpoints" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

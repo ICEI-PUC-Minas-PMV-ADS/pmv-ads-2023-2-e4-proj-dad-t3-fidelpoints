@@ -1,6 +1,6 @@
 package io.puc.projeto.fidelpoints.service;
 
-import io.puc.projeto.fidelpoints.domain.entity.Lojista;
+import io.puc.projeto.fidelpoints.entity.Lojista;
 import org.springframework.transaction.annotation.Transactional;
 
 public interface LojistaService {

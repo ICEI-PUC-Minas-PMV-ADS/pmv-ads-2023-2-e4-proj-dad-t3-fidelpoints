@@ -5,7 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a40d3e1-f9c1-4d15-94b9-2b33f8b33e43" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/config/GeneralConfigAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/config/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/config/JwtAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/config/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/config/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/service/AutenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/service/AutenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/service/AutenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/service/impl/AutenticationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/service/UserAutenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/service/UserAutenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/service/UserAutenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/auth/service/impl/UserAutenticationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/entity/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/entity/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/entity/ItemPedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/entity/ItemPedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/entity/Lojista.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/entity/Lojista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/entity/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/entity/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/entity/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/entity/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/enums/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/enums/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/enums/StatusPedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/enums/StatusPedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/repository/ClientesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/repository/ClientesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/repository/ItemsPedidoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/repository/ItemsPedidoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/repository/LojistaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/repository/LojistaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/repository/PedidosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/repository/PedidosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/domain/repository/ProdutosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/repository/ProdutosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/exception/PedidoNaoEncontradoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/exception/erros/PedidoNaoEncontradoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/exception/RegraNegocioException.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/exception/erros/RegraNegocioException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/exception/SenhaInvalidaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/exception/erros/SenhaInvalidaException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/ApiErrors.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/exception/ApiErrors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/controller/ApplicationControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/exception/ApplicationControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/controller/LojistaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/LojistaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/controller/PedidoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/PedidoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/ProdutoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/AtualizacaoStatusPedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/dto/AtualizacaoStatusPedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/CredenciaisDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/dto/CredenciaisDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/InformacaoItemPedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/dto/InformacaoItemPedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/InformacoesPedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/dto/InformacoesPedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/ItemPedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/dto/ItemPedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/PedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/dto/PedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/rest/dto/TokenDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/dto/TokenDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/ClienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/LojistaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/LojistaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/PedidoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/PedidoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/impl/ClienteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/impl/ClienteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/impl/LojistaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/impl/LojistaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/impl/PedidoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/service/impl/PedidoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fidelpoints/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/fidelpoints/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,12 +62,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.puc.projeto.fidelpoints.exception.erros" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.FidelpointsApplication">
     <configuration name="FidelpointsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.puc.projeto.fidelpoints.FidelpointsApplication" />
       <module name="fidelpoints" />
@@ -30,6 +89,18 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -53,5 +124,35 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/controller/ClienteController.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/exception/ApplicationControllerAdvice.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/exception/ApplicationControllerAdvice.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fidelpoints/src/main/java/io/puc/projeto/fidelpoints/exception/ApplicationControllerAdvice.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

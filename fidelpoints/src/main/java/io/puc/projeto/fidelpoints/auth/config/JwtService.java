@@ -6,9 +6,9 @@ import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.puc.projeto.fidelpoints.FidelpointsApplication;
-import io.puc.projeto.fidelpoints.domain.entity.Cliente;
-import io.puc.projeto.fidelpoints.domain.entity.Lojista;
-import io.puc.projeto.fidelpoints.domain.enums.Role;
+import io.puc.projeto.fidelpoints.entity.Cliente;
+import io.puc.projeto.fidelpoints.entity.Lojista;
+import io.puc.projeto.fidelpoints.enums.Role;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -87,7 +87,7 @@ public class JwtService {
         }
     }
 
-   public String obterLoginUsuario (String token) throws ExpiredJwtException{
+   public String getUsernameByToken(String token) throws ExpiredJwtException{
         return (String) getClaims(token).getSubject();
     }
 
@@ -105,7 +105,7 @@ public class JwtService {
 
         boolean isTokenValido = service.tokenValido(token);
         System.out.println("O token está válido? " + isTokenValido);
-        System.out.println(service.obterLoginUsuario(token));
+        System.out.println(service.getUsernameByToken(token));
     }
 
 }

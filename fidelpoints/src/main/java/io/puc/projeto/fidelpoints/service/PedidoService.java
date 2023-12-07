@@ -1,8 +1,8 @@
 package io.puc.projeto.fidelpoints.service;
 
-import io.puc.projeto.fidelpoints.domain.entity.Pedido;
-import io.puc.projeto.fidelpoints.domain.enums.StatusPedido;
-import io.puc.projeto.fidelpoints.rest.dto.PedidoDTO;
+import io.puc.projeto.fidelpoints.entity.Pedido;
+import io.puc.projeto.fidelpoints.enums.StatusPedido;
+import io.puc.projeto.fidelpoints.controller.dto.PedidoDTO;
 
 import java.util.Optional;
 

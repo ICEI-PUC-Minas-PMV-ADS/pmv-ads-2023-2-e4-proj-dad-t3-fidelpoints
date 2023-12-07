@@ -1,7 +1,7 @@
 package io.puc.projeto.fidelpoints.auth.service;
 
-import io.puc.projeto.fidelpoints.domain.entity.Cliente;
-import io.puc.projeto.fidelpoints.domain.entity.Lojista;
+import io.puc.projeto.fidelpoints.entity.Cliente;
+import io.puc.projeto.fidelpoints.entity.Lojista;
 
 public interface UserAutenticationService {
     Cliente loadCliente(String username);

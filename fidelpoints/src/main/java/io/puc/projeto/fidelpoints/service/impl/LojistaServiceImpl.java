@@ -1,8 +1,8 @@
 package io.puc.projeto.fidelpoints.service.impl;
 
-import io.puc.projeto.fidelpoints.domain.entity.Lojista;
-import io.puc.projeto.fidelpoints.domain.enums.Role;
-import io.puc.projeto.fidelpoints.domain.repository.LojistaRepository;
+import io.puc.projeto.fidelpoints.entity.Lojista;
+import io.puc.projeto.fidelpoints.enums.Role;
+import io.puc.projeto.fidelpoints.repository.LojistaRepository;
 import io.puc.projeto.fidelpoints.service.LojistaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
