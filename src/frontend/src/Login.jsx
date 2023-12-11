@@ -1,9 +1,9 @@
 
 import { useNavigate } from "react-router-dom";
-import Botao from '../Components/Botao'
+import Botao from '../Botao/Botao'
 import { useState } from 'react'
-import CampoTexto from '../Components/CampoTexto'
-import '../Style/Login.css'
+import CampoTexto from '../CampoTexto/CampoTexto'
+import './Login.css'
 
 const Login = () => {
 

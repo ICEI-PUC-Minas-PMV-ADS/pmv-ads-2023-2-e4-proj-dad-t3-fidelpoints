@@ -1,30 +1,29 @@
-.navbar{
-    width: 100%;
-}
-.ulMenu{
-    margin-left: 2px;
-    padding-left: 2px;
-    width: 100%;
+.navbar {
     display: flex;
-    justify-content: space-between;
-
-}
-.listNav{
-    display: flex;
-    position: 0;
     flex-direction: column;
+    align-items: start;
+    width: 1;
+    left: 0;
+  }
+  
+  .ulMenu {
     list-style: none;
-    font-size: 12px;
-    font-family: Arial;
-    width: 100%;
-}
-.hrMenu{
-    margin-left: 0px;
-    background-color: rgb(142, 139, 203);
-    padding-left: 0px;
-    height: 5px;
-    width: auto;
-}
-.cabecalho{
-    color: blue;
-}
+    padding: 0;
+    margin: 6;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .expandido {
+    max-height: 500px; /* Defina uma altura máxima adequada para exibir o menu expandido */
+  }
+  
+  .btnToggle {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    color: cornflowerblue;
+  }

@@ -1,7 +1,7 @@
 
-import Botao from '../Components/Botao'
+import Botao from '../Components/Botao/Botao'
 import { useState } from 'react'
-import CampoTexto from '../Components/CampoTexto'
+import CampoTexto from '../Components/CampoTexto/CampoTexto'
 import '../Style/RecuperarSenha.css'
 
 const RecuperarSenha = () => {

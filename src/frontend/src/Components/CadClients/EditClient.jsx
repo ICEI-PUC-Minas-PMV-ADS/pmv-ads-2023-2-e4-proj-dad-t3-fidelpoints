@@ -1,4 +1,4 @@
-import '../Style/cadClients.css'
+import './CadClients.css'
 import { useState } from 'react';
 //import { json } from "react-router-dom";
 //import foto from '../Image/fotoCracha.jpg'

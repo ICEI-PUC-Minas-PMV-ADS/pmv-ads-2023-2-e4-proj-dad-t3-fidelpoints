@@ -1,4 +1,4 @@
-import '../Style/Botao.css'
+import './Botao.css'
 
 const Botao = (props) => {
     const logOk = () => {

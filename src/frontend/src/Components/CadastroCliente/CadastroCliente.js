@@ -1,9 +1,12 @@
 
-import Botao from '../Components/Botao'
+import Botao from '../Botao/Botao'
+import { useNavigate } from "react-router-dom";
 import { useState } from 'react'
-import CampoTexto from '../Components/CampoTexto'
-import '../Style/CadastroCliente.css'
-import Navbar from '../Layout/Navbar'
+import CampoTexto from '../CampoTexto/CampoTexto'
+import './CadastroCliente.css'
+import Navbar from '../../Layout/Navbar'
+import axios from 'axios';
+
 
 const CadastroCliente = () => {
 
@@ -11,6 +14,8 @@ const CadastroCliente = () => {
     const [nome, setNome] = useState('')
     const [celular, setCelular] = useState('')
     const [pontos, setPontos] = useState('')
+    const [email, setEmail] = useState('')
+    const navigate = useNavigate();
 
 
 
@@ -18,13 +23,36 @@ const CadastroCliente = () => {
     const aoSalvar = (evento) => {
         evento.preventDefault()
         console.log('Form foi submetido => ', nome, celular, pontos)
+
+        let teste = axios.post("http://localhost:8080/pontos",
+            {
+                emailCliente: email,
+                celular: celular,
+                nomeCliente: nome,
+                quantidadePontos: pontos
+            },
+            {
+                headers: {
+                    "Authorization": 'Bearer ' + localStorage.getItem('token')
+                }
+            }
+        ).then((response) => {
+            console.log(response.data);
+
+            navigate("/Client")
+
+        }).catch(error => {
+            console.log(error);
+        });;
+
     }
+
 
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <section className="formulario">
-            
+
                 <form onSubmit={aoSalvar}>
                     <h2>Preencha os campos a baixo com os dados do cliente</h2>
                     <CampoTexto
@@ -47,8 +75,16 @@ const CadastroCliente = () => {
                         obrigatorio={true}
                         label="Pontos"
                         placeholderModificada="Pontos Cliente"
-                        valor={celular}
+                        valor={pontos}
                         aoAlterado={valor => setPontos(valor)}
+                    />
+
+                    <CampoTexto
+                        obrigatorio={true}
+                        label="Email"
+                        placeholderModificada="Email Cliente"
+                        valor={email}
+                        aoAlterado={valor => setEmail(valor)}
                     />
 
                     <Botao>

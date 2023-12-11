@@ -1,5 +1,5 @@
 import { useState,/* useEffect */ } from "react";
-import '../Style/cadClient.css'
+import '../CadClients.css'
 //import Client from "./Client";
 //import { json } from "react-router-dom";
 //import foto from '../Image/fotoCracha.jpg'

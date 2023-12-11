@@ -1,96 +1,80 @@
-import { useState,/* useEffect */ } from "react";
+import { useState} from "react";
+import { useNavigate } from "react-router-dom";
 import '../Style/cadProduct.css'
 import Navbar from "../Layout/Navbar";
-//import Product from "./Product";
-//import { json } from "react-router-dom";
-//import foto from '../Image/fotoCracha.jpg'
+import'../Components/CampoTexto/CampoTexto'
+import'../Components/Botao/Botao'
+import axios from 'axios';
+import CampoTexto from "../Components/CampoTexto/CampoTexto";
+import Botao from "../Components/Botao/Botao";
 
-function CadProduct(props){
-    
-    const[image, setImage] = useState();
-    const[postProduct, setPostProduct] = useState({'name':"", 'description':"",'image':Blob, 'points':""});
-    
-    const preview = (e) => {
-        setImage(e.target.files[0])
-        if(e.target.getAttribute('name') === "nameImage"){
-            setPostProduct({
-                'name':postProduct.name, 
-                'description':postProduct.description,
-                'image': e.target.files[0],
-                'points':postProduct.points
-            })
-        //    console.log(postProduct);
+function CadProduct() {
+
+  const navigate = useNavigate();
+  const [nome, setNome] = useState('')
+  const [pontos, setPontos] = useState('')
+
+
+  const aoSalvar = (evento) => {
+    evento.preventDefault()
+    console.log('Form foi submetido => ', nome, pontos)
+
+    let teste = axios.post("http://localhost:8080/produtos",
+        {
+          nomeProduto: nome,
+          pontos: pontos
+        },
+        {
+            headers: {
+                "Authorization": 'Bearer ' + localStorage.getItem('token')
+            }
         }
+    ).then((response) => {
+        console.log(response.data);
         
-    }
-    function fillObject(e){
-        e.preventDefault();
-    //    console.log(postProduct)
-    //    console.log(e.target.getAttribute('name'))
-    
-           if(e.target.getAttribute('name') === "nameProduct"){
-                setPostProduct({'name':e.target.value, 'description':postProduct.description,'image': postProduct.image, 'points':postProduct.points})
-           }else if(e.target.getAttribute('name') === "description"){
-                setPostProduct({'name':postProduct.name, 'description':e.target.value,'image': postProduct.image, 'points':postProduct.points})
-           }else if(e.target.getAttribute('name') === "points"){
-                setPostProduct({'name':postProduct.name, 'description':postProduct.description,'image': postProduct.image, 'points':e.target.value})
-           }
-        //   console.log(postProduct)
-        
-    }
-    const uploadFile = e =>{
-       //Aqui será o axios
-       e.preventDefault()
-       console.log(postProduct)
-    //   props.productT(postProduct);
-       const stringProduct = JSON.stringify(postProduct)
-       console.log(stringProduct)
-    }
 
-    const cancel = ()=> {
-        Array.from(document.querySelectorAll('input')).map(input =>
-            input.value = ""
-        )
-        setImage(null);
-        setPostProduct("");
-    }
-    return(
-        <div className="layoutProduct">
-            <Navbar/>
-            <h2>Cadastro de produtos</h2>
-            <div className="cadProduct">
-                
-                <div className="content">
-                    <form className="image" onSubmit={uploadFile}>
-                        <input name="nameProduct" 
-                            className="nameProduct"
-                            type="text" 
-                            placeholder="Digite Nome do Produto"
-                            id="nameProduct"
-                            onChange={(e) =>fillObject(e)}/>
-                        <label htmlFor="">Selecione arquivo de imagem:</label>
-                        <input name="nameImage" 
-                            className="file" 
-                            type="file" id="file" 
-                            onChange={preview} />
-                        {image ? <img src={URL.createObjectURL(image)} width="150" height="200" alt="Nao carregou"/> : 
-                            <img src="#" width="150" height="200" alt="Carregue uma imagem válida"/>}
-                    
-                        <textarea placeholder="Descrição:" name="description" id="description" cols="25" rows="4" onChange={(e) =>fillObject(e)}></textarea>
-                        <div className="point">
-                        <label>Pontos:</label>
-                        <input type="number" name="points" id="points" onChange={(e) =>fillObject(e)} />
-                        </div>
-                        <div className="buttons">
-                        <button type="button" onClick={cancel}>Cancelar</button>
-                        <button type="submit">Confirmar</button>
-                        </div>
-                    </form>
-                </div>
-                
-                
-            </div>
-        </div>
-    )
+    }).catch(error => {
+        console.log(error);
+    });
+
+
+    navigate("/Product")
+
+}
+
+
+  return (
+      <div>
+          <Navbar />
+          <section className="formulario">
+              <form onSubmit={aoSalvar}>
+                  <h2>cadastre seu produto</h2>
+
+                  <CampoTexto
+                      obrigatorio={true}
+                      label="Nome"
+                      placeholderModificada="Nome produto..."
+                      valor={nome}
+                      aoAlterado={valor => setNome(valor)}
+                  />
+
+
+                  <CampoTexto
+                      obrigatorio={true}
+                      label="Pontos"
+                      placeholderModificada="Pontos produto"
+                      valor={pontos}
+                      aoAlterado={valor => setPontos(valor)}
+                  />
+
+
+                  <Botao>
+                      Cadastrar
+                  </Botao>
+
+              </form>
+          </section>
+      </div>
+  )
 }
 export default CadProduct

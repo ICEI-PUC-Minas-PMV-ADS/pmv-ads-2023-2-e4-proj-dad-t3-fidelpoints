@@ -1,56 +1,75 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../Style/produtos.css';
 import { Link } from 'react-router-dom';
 import Navbar from '../Layout/Navbar';
+import axios from 'axios';
 //import {fs as fs} from 'node:fs'
 //import CadProduct from './CadProduct';
 
-function Product({postProduto}){
-    const [product,/* setProduct*/] = useState([
-        {'name':"Edglei", 'description':"Só testando pra ver",'image':Blob, 'points':"200"},
-        {'name':"Edivania", 'description':"Só testando pra ver",'image':Blob, 'points':"200"},
-        {'name':"Ana", 'description':"Só testando pra ver",'image':Blob, 'points':"200"}
-        ]);
-/*    function table(){
-    //    fs.readFile ("Product.json", (err, data) => setProduct(JSON.parse(data)))
-       return(
-        <h2>Não sei</h2>
-       )
-
-
-       
-
-    }*/
+const Product = () => {
     
-    return(
-        <div className="layoutProdutos">
-            <Navbar/>
-            <h2>Lista de produtos</h2>
-            <div className="produtos">
-                <ul className='listProduct'>
-                <li className='list'>
-                                <li>Foto</li>
-                                <li> Nome</li> 
-                                <li> Descrição:</li>
-                                <li> Pontos:</li>
-                                <li> Editar</li>
-                            </li>
-                    {product ?
-                        product.map(p =>
-                            <li className='list'>
-                                <li><img className='imgList' src= "#" alt='#'/></li>
-                                <li> {p.name} </li> 
-                                <li> {p.description} </li>
-                                <li> {p.points}</li>
-                                <Link to={'/EditProduct'}>Edite</Link>
-                            </li>)
-                        : <h2>Produtos não cadastrado</h2>
-                    }
-                </ul>
-            </div>
-            
+    const [products, setProducts] = useState([]);
+
+      console.log("caiu")
+
+      useEffect(() => {
+        let mounted = true
+
+        let teste = axios.get("http://localhost:8080/produtos", 
+        {headers: {
+          "Authorization" : 'Bearer ' + localStorage.getItem('token')
+        }
+       })
+          .then((response) => {
+            if (response.status == 200) {
+                console.log(response.data);
+                setProducts(response.data);
+              }
+  
+          return ()=>mounted =false
+          }).catch(error => {
+                console.log(error);
+          });;
+  
+          console.log("teste: " + teste);
+      },[]);
+
+
+     
+    
+      return (
+        <div className="formulario">
+          <Navbar />
+          <form>
+          <h2>Lista de produtos</h2>
+          <div className="">
+            <table className='suaClasseDeTabela'>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Pontos</th>
+                </tr>
+              </thead>
+              <tbody>
+                {products ? (
+                  products.map(product => (
+                    <tr key={product.idProduto} className=''>
+                      <td>{product.nomeProduto}</td>
+                      <td>{product.pontos}</td>
+                      <td><Link to={`/EditProduct/${product.id}`}>Editar</Link></td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="4">Produtos não cadastrados</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+          </form>
         </div>
-    )
-}
+      );
+    }
 
 export default Product;

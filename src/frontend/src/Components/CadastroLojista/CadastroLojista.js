@@ -1,11 +1,11 @@
 
-import Botao from '../Components/Botao'
+import Botao from '../Botao/Botao'
 import { useState } from 'react'
-import CampoTexto from '../Components/CampoTexto'
-import '../Style/CadastroLogista.css'
-import Navbar from '../Layout/Navbar'
+import CampoTexto from '../CampoTexto/CampoTexto'
+import './CadastroLojista.css'
+import Navbar from '../../Layout/Navbar'
 
-const CadastroLogista = () => {
+const CadastroLojista = () => {
 
 
     const [nome, setNome] = useState('')
@@ -76,4 +76,4 @@ const CadastroLogista = () => {
     )
 }
 
-export default CadastroLogista
+export default CadastroLojista
