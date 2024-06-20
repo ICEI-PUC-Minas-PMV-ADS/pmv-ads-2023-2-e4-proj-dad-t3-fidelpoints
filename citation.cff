@@ -1,0 +1,22 @@
+message: Please cite this software using these metadata.
+title: FIDELPOINTS
+authors:
+  - family-names: de Sousa Marques
+    given-names: Edglei
+  - family-names: Silva Jaques
+    given-names: Leonardo
+  - family-names: Conceição Silva
+    given-names: Renato
+  - family-names: Ingrid De Oliveira Pinto
+    given-names: Stephanie
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Leonardo 
+    given-names: Vilela Cardoso
+keywords:
+  - Gestão
+  - Biblioteca
+  - Livros
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-fidelpoints
+version: 1.0.0
+date-released: 2023-11-15
